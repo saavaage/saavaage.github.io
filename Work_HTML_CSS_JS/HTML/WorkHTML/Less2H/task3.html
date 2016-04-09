@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name= "registration" action="/">
+    <p>Your name: <br>
+    <input type="text" size="30" name="name" value="Ваша фамилия?" required></p>
+
+    <p>Your e-mail: <br>
+    <input type="email" size="30" name="mail" value="Ваш почтовый ящик?" required></p>
+
+    <p>Your sex:<br>
+        <input type="radio" name="radio" value="r1">Male
+        <input type="radio" name="radio" value="r2">Female<br/>
+
+    </p>
+
+    <p>Current Status:<br>
+        <label><input type="checkbox" name="check" value="ch1">Student</label> <br>
+        <label><input type="checkbox" name="check" value="ch1">Employed</label> <br>
+        <label><input type="checkbox" name="check" value="ch1">Unemployed</label> <br>
+    </p>
+
+    <p>Month and year of birth:<br>
+        <select>
+            <option>Январь</option>
+            <option>Февраль</option>
+            <option>Март</option>
+            <option>Апрель</option>
+        </select>
+        <select>
+            <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+        </select>
+    </p>
+
+    <p>Skills and technologies:<br>
+        <select size="10" multiple>
+           <optgroup label="Tech skills">
+            <option>html</option>
+            <option>css</option>
+            <option>javascript</option>
+            <option>git</option>
+            </optgroup>
+            <optgroup label="Soft skills">
+                <option>time-management</option>
+                <option>project-management</option>
+                <option>teamwork</option>
+                <option>leadership</option>
+            </optgroup>
+        </select>
+
+    </p>
+
+    <p>Photo<br>
+        <input type="file" name="photo" value="ph1"><br>
+    </p>
+
+    <p>Comments<br>
+        <textarea cols="60" rows="5" name="comments" required >Дополнительная информация, важная для соискателя</textarea>
+    </p>
+
+
+    <p><input type="submit" value="Save">
+        <input type="reset" value="Вернуть до значений по умолчанию">
+    </p>
+
+
+</form>
+
+
+</body>
+</html>
