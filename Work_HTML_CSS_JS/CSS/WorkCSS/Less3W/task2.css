@@ -1,0 +1,35 @@
+body
+{
+    font-size: 24px;
+}
+
+#myid
+{
+    color: #ff0000;
+}
+
+.myclass
+{
+    color: blue; /* применился ко всем */
+}
+
+#myid2.myclass
+{
+    font-weight: bold;
+}
+
+.myclass.mysuperclass
+{
+    text-decoration: underline;
+}
+
+#myid3.myclass.mysuperclass
+{
+    font-style: italic;
+}
+
+/* 2 id невалидно */
+#myid4.myclass.mysuperclass
+{
+    background: yellow;
+}
