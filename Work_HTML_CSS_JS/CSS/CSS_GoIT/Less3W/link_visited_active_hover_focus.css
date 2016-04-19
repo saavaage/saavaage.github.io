@@ -1,0 +1,44 @@
+/*
+	любые стили для :visited
+	отключены в webkit по
+	соображениям безопастности
+*/
+:visited
+{
+    /* разрешается менять только color */
+    color: red;
+}
+
+:link
+{
+    color: green;
+}
+
+
+:link:hover
+    /* :visited:hover */
+{
+    /*
+        если определить :hover без уточнения,
+        он сработает вообще на всех элементах,
+
+        ===
+        :link матчится на все
+        непосещенные ссылки и только
+
+        :visited только на посещенные —>
+        перестает обрабатывать правила :hover
+    */
+    color: black;
+}
+
+:link:active,
+:link:focus
+    /*
+        :visited:active,
+        :visited:focus
+    */
+{
+    background: red;
+    color: #fff;
+}

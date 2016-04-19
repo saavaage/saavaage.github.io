@@ -1,0 +1,11 @@
+.i:before
+{
+    content: 'before ';
+    color: green;
+}
+
+.i:after
+{
+    content: ' after';
+    color: red;
+}

@@ -1,0 +1,71 @@
+/*
+	http://www.stuffandnonsense.co.uk/archives/images/specificitywars-05v2.jpg
+	http://css-tricks.com/specifics-on-css-specificity/
+
+
+
+	Специфичность (вес) селектора считается
+	по баллам, которые селектор получает в зависимости
+	от того, как происходит выбор элемента.
+	В целом концепция укладывается в рамки:
+	"Чем более точно определено, тем  важнее"
+
+	Каждый match получает баллы
+
+	style | id | class/pseudo-class/attribute | elements
+ 	  0   |  0 |   0                          |   0
+
+*/
+
+/*
+	селектор '*' не изменяет вес (его вес равен 0),
+	соответственно * = 0,0,0,0
+*/
+*
+{
+    color: red;
+}
+
+
+/*
+	elem = 0,0,0,1
+	elem elem = 0,0,0,2
+
+	не смотря на порядок
+*/
+li span
+{
+    text-decoration: line-through;
+}
+
+span
+{
+    text-decoration: underline;
+    color: black;
+}
+
+/* соответственно */
+ul#list
+{
+    border: none; /* 0, 1, 0, 1 — wins! */
+}
+
+ul
+{
+    border: 1px solid; /* 0, 0, 0, 1 — looose! */
+}
+
+body ul#list li.item
+{
+    color: black; /* 0, 1, 1, 3 — wins! */
+}
+
+body #list .item
+{
+    color: red; /* 0, 1, 1, 1 — looose! */
+}
+
+/*
+	style зарулит все выше, кроме !important
+	!important зарулит только !important в style
+*/

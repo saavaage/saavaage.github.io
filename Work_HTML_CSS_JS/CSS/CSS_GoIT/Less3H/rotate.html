@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Текст</title>
+    <style>
+        .t1 { /*Справа налево */
+            unicode-bidi: bidi-override;
+            direction: rtl;
+        }
+        .t2 {
+            transform: rotateY(180deg); /* Отражение по горизонтали */
+        }
+        .t3 {
+            transform: rotateX(180deg); /* Отражение по вертикали */
+        }
+        .t4 { /* Поворот каждой буквы */
+            transform: rotateY(180deg);
+            unicode-bidi: bidi-override;
+            direction: rtl;
+        }
+    </style>
+</head>
+
+<body>
+<p>Алиса в Зазеркалье</p>
+<p class="t1">Алиса в Зазеркалье</p>
+<p class="t2">Алиса в Зазеркалье</p>
+<p class="t3">Алиса в Зазеркалье</p>
+<p class="t4">Алиса в Зазеркалье</p>
+
+</body>
+
+</html>

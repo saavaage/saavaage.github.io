@@ -1,0 +1,34 @@
+/* самый распространенный: все потомки */
+.parent .child
+{
+    aborder: 1px solid red;
+}
+
+/*
+	все селекторы можно уточнять
+	именами элементов ol.parent li.child
+*/
+
+ol.parent li.child
+{
+    aborder: 1px solid red;
+}
+
+/* только child */
+.parent > .child
+{
+    aborder: 1px solid red;
+}
+
+/* следующий за */
+
+.child04 + .child {
+    aborder: 1px solid red;
+}
+
+/* после */
+.child01 ~ .child
+{
+    aborder: 1px solid red;
+}
+

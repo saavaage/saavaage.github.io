@@ -1,0 +1,48 @@
+/*
+	:first- |:last- child — любой E,
+	являющийся первым или последним ребенком
+*/
+
+.parent li:first-child
+{
+    border: 3px solid red;
+}
+
+.parent :first-child
+{
+    background: yellow;
+}
+
+.parent li.child:first-child
+{
+    font-weight: bold;
+}
+
+/*
+	любой первый преставитель своего типа элементов
+	среди братьев
+*/
+.parent li:first-of-type:before
+{
+    content: "first of type >> ";
+}
+
+/*
+	выбирает элементы, которые являются единственными
+	вложенными элементами в родителя
+*/
+.parent :only-child:before
+{
+    content: "only-child >> ";
+    font-weight: bold;
+}
+
+/*
+	выбирает элементы, которые являются единственными
+	своего типа среди братьев
+	(в том числе и просто единственные у своего родителя)
+*/
+.parent span:only-of-type
+{
+    border: 1px dashed;
+}

@@ -1,0 +1,12 @@
+thead { color: Chartreuse;  font: normal small-caps 14pt Arial; }
+tbody { font-size: 12pt; vertical-align:top; text-align: center }
+table { background-image: url("image.gif")}
+tfoot { color: DarkBlue; font: italic normal 14pt Georgia}
+caption {font-size: 16pt; font-style: oblique; font-variant:small-caps}
+
+
+#top { height: 20px; width:412px; border: 3px double black}
+#left { height: 200px; width:50px; border: 3px double black; float: left}
+#content { height: 200px; width:300px; border: 3px double black; float:left}
+#right { height: 200px; width:50px; border: 3px double black; float:left}
+#bottom { height: 20px; width:412px; border: 3px double black; clear: left}

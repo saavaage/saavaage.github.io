@@ -1,0 +1,19 @@
+p:first-line,
+span:first-line /* не работает у строковых элементов */
+{
+    font-size: 300%;
+}
+
+p:first-letter,
+span:first-letter  /* но почему не работает тут?! upyachka.gif */
+{
+    color: red;
+}
+
+/*специально для инлайновых элементов, типа span*/
+span
+{
+	display: inline-block;
+}
+
+

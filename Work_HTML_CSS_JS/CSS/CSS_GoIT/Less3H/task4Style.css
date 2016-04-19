@@ -1,0 +1,17 @@
+*{
+    font-weight: bold;
+}
+a[href*="http"]{
+    color: #f70;
+}
+a[href*="google.com"]{
+    color: #666;
+}
+a[target="_blank"]:after {
+    content:' \21F1';
+    font-size: 12px;
+    height:2px;
+    display: inline-block;
+    margin: 2px;
+    transform: scaleX(-1);
+}

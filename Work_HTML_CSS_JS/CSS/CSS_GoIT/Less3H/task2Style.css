@@ -1,0 +1,6 @@
+article p:nth-of-type(1){
+    font-size: 24px; text-transform: uppercase;
+}
+article p:last-of-type{
+    color: #999;
+}

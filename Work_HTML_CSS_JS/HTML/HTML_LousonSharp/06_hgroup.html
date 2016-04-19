@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Иногда помимо заголовка используется подзаголовок или слоган: на сайте Slashdot —-->
+<!--«News for nerds. News that matters», на dev.Opera — «Follow the standards. Break the rules»,-->
+<!--на Metafilter — «community weblog». Как следует писать разметку для таких слоганов?-->
+<!--В HTML5 подзаголовок-->
+<!--можно разметить как заголовок, но так, чтобы он не отображался в структуре документа.-->
+<hgroup>
+    <h1>Metafilter</h1>
+    <h2>community weblog</h2>
+</hgroup>
+
+
+<!--В примере внутри <article> мы не использовали элемент <header> <header> — это элемент, который группирует-->
+    <!--предварительные данные; поскольку здесь у нас есть только заголовки, уже объединенные в <hgroup>, еще одно-->
+        <!--объединение было бы хотя и не ошибочным, но явно излишним-->
+
+
+<article>
+    <hgroup>
+        <h2>Get the beers in! Here comes</h2>
+        <h1>Remy Sharp!</h1>
+    </hgroup>
+</article>
+
+
+
+</body>
+</html>

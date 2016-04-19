@@ -1,0 +1,22 @@
+/*
+	E:nth-of-type(an+b)
+	тоже самое, но работает только с группой E-элементов
+
+	p:nth-child(2)
+	это параграф && это второй элемент своего родителя
+
+	p:nth-of-type(2)
+	это второй параграф своего родителя
+	http://css-tricks.com/the-difference-between-nth-child-and-nth-of-type/
+*/
+
+.parent p:nth-child(2)
+{
+    color: red;
+}
+
+
+.parent p:nth-of-type(2)
+{
+    text-decoration: line-through;
+}

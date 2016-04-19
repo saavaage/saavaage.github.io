@@ -1,0 +1,48 @@
+body
+{
+    font-size: 24px
+}
+
+/* все элементы с атрибутом id */
+div[id]
+{
+    color: red;
+}
+
+/* все элементы с атрибутом class с определнным значением */
+div[class="myclass mysuperclass"]
+{
+    text-decoration: underline;
+}
+
+/* все элементы с атрибутом id и определенным класс */
+/* не затрагивает двойные — сравнение по строке */
+div[id][class="myclass"]
+{
+    border: 2px dashed #000;
+}
+
+/* а так выбирает по слову */
+div[id][class~="myclass"]
+{
+    background: yellow;
+}
+
+/*
+E[foo^="bar"] — начало
+E[foo$="bar"] — конец
+*/
+
+/* содержит */
+div[title*="ест"]
+{
+    font-style: italic;
+}
+
+
+/*
+E[lang|="en"] > lang="en-au"
+E[src|="figure"] > img src="figure-1.png", img src="figure-2.png"
+*/
+
+input[name ="text2"] { border: 3px dotted #ff0000;}

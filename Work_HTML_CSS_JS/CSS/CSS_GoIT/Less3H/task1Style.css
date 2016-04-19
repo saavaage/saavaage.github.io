@@ -1,0 +1,45 @@
+/*ШАПКА*/
+h1 {color: orange; text-align: right;}
+
+/*СТАТЬИ*/
+p em { background: green; color: white; font-weight: bold;}
+p:first-letter{color: red; font-size: 30px; font-weight: bold;}
+
+/*СПИСКИ*/
+#allotment.plants-list h2{
+    color: orange;
+}
+#warehouse.plants-list h2{
+    color: blue;
+}
+ul li:nth-child(n) {
+    font-weight: bold;
+}
+
+#allotment.plants-list  .fruits-list li{
+    color: gray;
+}
+#allotment.plants-list  .vegetables-list li{
+    color: red;
+}
+
+#warehouse.plants-list  .fruits-list li{
+    color: green;
+}
+
+#warehouse.plants-list  .vegetables-list li{
+    color: red;
+}
+
+/*ТАБЛИЦА*/
+
+thead{
+    text-align: center; font-weight: bold;
+}
+tbody tr td:nth-child(n+2){
+    background: green;text-align: center; color: white;
+}
+tbody tr td:nth-child(1)
+{
+    color: orange; text-align: left;
+}
