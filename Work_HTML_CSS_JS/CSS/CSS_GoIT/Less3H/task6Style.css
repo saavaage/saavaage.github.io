@@ -13,7 +13,10 @@ span {
     visibility: hidden;
 }
 
-label {padding-right: 30px; font-size: 16px; font-family: Arial; font-weight: bold; text-decoration: underline;}
+label {
+    padding-right: 30px; font-size: 16px; font-family: Arial;
+    font-weight: bold; text-decoration: underline;
+}
 label[for="red"]{color:red;}
 label[for="green"]{color:green;}
 label[for="blue"]{color:blue;}
@@ -23,51 +26,26 @@ div .green{background-color: green;}
 div .blue{background-color: blue;}
 
 /*ДЕЙСТВИЯ*/
-input[id="red"]:checked + input + input + label[for="red"]{
+input[id="red"]:checked ~label[for="red"]{
     color: #CCCCCC;
 }
 
-input[id="green"]:checked + input + label + label[for="green"]{
+input[id="green"]:checked ~label[for="green"]{
     color: #CCCCCC;
 }
-input[id="blue"]:checked + label + label + label[for="blue"]{
+input[id="blue"]:checked ~label[for="blue"]{
     color: #CCCCCC;
 }
 
 /*Убираем красные блоки*/
-input[id="red"]:checked  + input + input + label + label + label + span[class="red"]{
-    display: none;
-}
-input[id="red"]:checked  + input + input + label + label + label + span + span +  span + span[class="red"]{
-    display: none;
-}
-input[id="red"]:checked  + input + input + label + label + label + span + span +  span + span +  span + span+ span[class="red"]{
-    display: none;
-}
-input[id="red"]:checked  + input + input + label + label + label + span + span +  span + span + span + span+ span + span + span[class="red"]{
+input[id="red"]:checked ~ span[class="red"]{
     display: none;
 }
 /*Убираем зеленые блоки*/
-input[id="green"]:checked  +  input + label + label + label + span + span[class="green"]{
-    display: none;
-}
-input[id="green"]:checked  + input + label + label + label + span + span + span[class="green"]{
-    display: none;
-}
-input[id="green"]:checked  + input + label + label + label + span + span + span + span + span + span[class="green"]{
-    display: none;
-}
-input[id="green"]:checked + input + label + label + label + span + span + span + span + span + span + span + span + span + span[class="green"]{
+input[id="green"]:checked ~ span[class="green"]{
     display: none;
 }
 /*Убираем синие блоки*/
-input[id="blue"]:checked  + label + label + label + span + span + span + span + span[class="blue"]{
-    display: none;
-}
-input[id="blue"]:checked  + label + label + label + span + span + span + span  + span + span + span+ span[class="blue"]{
-     display: none;
-}
-
-input[id="blue"]:checked  + label + label + label + span + span + span + span  + span + span + span+ span  + span + span+ span[class="blue"]{
+input[id="blue"]:checked ~ span[class="blue"]{
     display: none;
 }
