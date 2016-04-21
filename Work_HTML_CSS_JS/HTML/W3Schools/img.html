@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+<!--width and height - with a style-->
+<img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+<br>
+<!--width and height - standart-->
+<img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+<br>
+<!-- We suggest you use the style attribute. It prevents styles sheets from
+ changing the original size of images!!! -->
+
+<!--src - папка на Вашем сервере, а не ссылка-->
+<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+<br>
+<!--Images on Another Server-->
+<img src="http://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" style="width:128px; height: 128px;">
+<br>
+<!--Animated Images-->
+<img src="programming.gif" alt="Computer Man" style="width:48px;height:48px;">
+
+<br>
+<!--Using an Image as a Link Add "border:0;" to prevent IE9 (and earlier) from displaying a border around the image.-->
+<a href="http://www.w3schools.com/html"><img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+</a>
+<br>
+<!--Image Floating use Style!!!-->
+<p>
+    <img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+    The image will float to the right of the text.
+</p>
+
+<p>
+    <img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+    The image will float to the left of the text.
+</p>
+<br>
+<!--Image Maps-->
+<!--Use the <map> tag to define an image-map. An image-map is an image with clickable areas.-->
+<!--The name attribute of the <map> tag is associated with the <img>'s usemap attribute and creates a relationship between the image and the map.-->
+<!--The <map> tag contains a number of <area> tags, that defines the clickable areas in the image-map-->
+<img src="planets.gif" alt="Planets" usemap="#planetmap" style="width:145px;height:126px;">
+<map name="planetmap">
+    <area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.gif">
+    <area shape="circle" coords="90,58,3" alt="Mercury" href="mercur.gif">
+    <area shape="circle" coords="124,58,8" alt="Venus" href="venus.gif">
+</map>
+
+
+</body>
+</html>
