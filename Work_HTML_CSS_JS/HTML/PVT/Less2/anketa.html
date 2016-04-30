@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Anketa</title>
+    <style>
+        input[type="radio"]:checked + span,
+        input[type="checkbox"]:checked + span{
+            color: green;
+            font-family:arial;
+            font-weight:bold;
+            font-size:20px;
+        }
+        input[type="text"]:focus{
+            border-style: solid;
+            border-color: green;
+
+        }
+    </style>
+</head>
+<body>
+<h1 align="center">Анкета</h1>
+<form action="/" method="get" style="border-style: solid; border-width:1px;">
+    <figure style="margin:5px; padding:5px 5px 20px 5px; float:right; width:150px; height:150px; text-align:center; display: inline-block;
+     background: #d9dabb; border-style: solid; border-width: 2px; border-color: green;">
+         <img src="111.png" alt="фото учащегося" width="97%" height="97%">
+        <figcapture>Студент-нуб</figcapture>
+    </figure>
+
+    <ol>
+        <li><a href="#name" >ФИО</a><br>
+            <input type="text" name="name" value="Гиббон Орангутанг Макакович" required="required" style="margin-left:40px; color:green; width:75%;" id="name">
+        </li>
+        <li><a href="#institute" >Образование (базовое/высшее/среднее/среднеспециальное), специальность</a><br>
+            <input type="text" name="institute" value="1-ый Африканский Тропический Университет" style="margin-left:40px; color:green; width:75%;" id="institute">
+        </li>
+        <li><a href="#job" >В какой сфере работаете, должность</a> <br>
+            <input type="text" name="job" value="пожиратель бананов 1 класса" style="margin-left:40px; color:green; width:75%;" id="job"></li>
+        <li><a href="#math" >Как у вас с математикой?</a>
+            <ol type="a">
+                <li><label><input type="radio" name="math" value="math1" id="math" checked="checked"><span>Терпеть не могу</span></label></li>
+                <li><label><input type="radio" name="math" value="math2"><span>Нормально, в школе сам контрольные писал</span></label></li>
+                <li><label><input type="radio" name="math" value="math3"><span>Могу взять производную, вычислить синус пи</span></label></li>
+                <li><label><input type="radio" name="math" value="math4"><span>Вычисляю в уме корни третьей степени</span></label></li>
+            </ol>
+        </li>
+        <li><a href="#pc_user" >Оцените себя, как пользователя компьютера</a>
+            <ol type="a">
+                <li><label><input type="radio" name="pc_user" value="pc_user1" checked="checked" id="pc_user"><span>Никогда не пользовался компьютером/планшетом/смартфоном</span></label></li>
+                <li><label><input type="radio" name="pc_user" value="pc_user2"><span>Пользуюсь регулярно, могу произвести некоторые настройки</span></label></li>
+                <li><label><input type="radio" name="pc_user" value="pc_user3"><span>Имею продвинутые знания, могу установить ОС, настроить ПО под нужды</span></label></li>
+                <li><label><input type="radio" name="pc_user" value="pc_user4"><span>Я сам пишу операционные системы, ассемблер для меня родной язык</span></label></li>
+            </ol>
+        </li>
+        <li><a href="#int" >Пользуетесь ли вы ресурсами сети Интернет?</a>
+            <ol type="a">
+                <li><label><input type="radio" name="internet" value="internet1" checked="checked" id="int"><span>Нет</span></label></li>
+                <li><label><input type="radio" name="internet" value="internet2"><span>Изредка</span></label></li>
+                <li><label><input type="radio" name="internet" value="internet3"><span>Регулярно</span></label></li>
+                <li><label><input type="radio" name="internet" value="internet4"><span>Я всегда в онлайне</span></label></li>
+            </ol>
+        </li>
+        <li><a href="#os" >С какими операционными системами работали (можно несколько)?</a>
+            <ol type="a">
+                <li><label><input type="checkbox" name="os1" value="win" checked="checked" id="os"><span>Windows</span></label></li>
+                <li><label><input type="checkbox" name="os2" value="lin"><span>Linux</span></label></li>
+                <li><label><input type="checkbox" name="os3" value="mac"><span>MacOS</span></label></li>
+                <li><label><input type="checkbox" name="os4" value="ios"><span>IOS</span></label></li>
+                <li><input type="text" name="os5" style="color:green; width:81%;"></li>
+            </ol>
+
+        </li>
+        <li><a href="#browser">Какие браузеры Вы знаете/пользуетесь(перечислите)?</a> <br/>
+            <input type="text" name="browsers" value="IE4, не понравился" style="margin-left:40px; color:green; width:77.5%;" id="browser">
+        </li>
+        <li><a href="#books" >Читаете ли вы книги/электронные книги?</a>
+            <ol type="a">
+                <li><label><input type="radio" name="books" value="books1" id="books"><span>Изредка</span></label></li>
+                <li><label><input type="radio" name="books" value="books2"><span>В транспорте</span></label></li>
+                <li><label><input type="radio" name="books" value="books3"><span>Стараюсь читать как можно больше</span></label></li>
+                <li><label><input type="radio" name="books" value="books3" checked="checked"><span>Другое:</span></label>
+                  <input type="text" name="books4" value="книги-зло!" style="color:green; width:75%;">
+                </li>
+            </ol>
+
+        </li>
+        <li><a href="#lang" >Оцените свое знание английского языка</a>
+            <ol type="a">
+                <li><label><input type="radio" name="lang" value="lang1" checked="checked" id="lang"><span>Ни бельмеса</span></label></li>
+                <li><label><input type="radio" name="lang" value="lang2"><span>Могу связать пару слов, объясниться</span></label></li>
+                <li><label><input type="radio" name="lang" value="lang3"><span>Могу вести переписку, читать техническую литературу</span></label></li>
+                <li><label><input type="radio" name="lang" value="lang4"><span>Прекрасно разговариваю, читаю техническую, художественную литературу</span></label></li>
+                <li><label><input type="radio" name="lang" value="lang5"><span>Английский – мой родной язык</span></label></li>
+            </ol>
+        </li>
+        <li><a href="#aim">Продолжите фразу «Я пришел сюда для того, чтобы»</a>
+            <ol type="a">
+                <li><label><input type="radio" name="aim" value="aim1" id="aim"><span>Изучить что-то новое и применять в дальнейшем в своей работе</span></label></li>
+                <li><label><input type="radio" name="aim" value="aim2"><span>Влиться в сферу IT</span></label></li>
+                <li><label><input type="radio" name="aim" value="aim3"><span>Есть свободное время, которое некуда девать/ за компанию с другом/подругой</span></label></li>
+                <li><label><input type="radio" name="aim" value="aim4"><span>Изучить что-то новое для себя (не планирую в дальнейшем применять эти знания в профессиональной деятельности)</span></label></li>
+                <li><label><input type="radio" name="aim" value="aim5"><span>После курсов найти себе более востребованную и высокооплачиваемую работу</span></label></li>
+                <li><label><input type="radio" name="aim" value="aim6" checked="checked"><span>Другое:</span></label>
+                    <input type="text" name="aim6" value="друзья-гиббоны сказали, что бананы спелые" style="color:green; width:75%;">
+                </li>
+
+            </ol>
+        </li>
+    </ol>
+    <p style="padding-right:20px;" align="right"><input type="reset" value="Очистить"> <input type="submit" value="Отправить"></p>
+</form>
+</body>
+</html>

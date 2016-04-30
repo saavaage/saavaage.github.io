@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #horline li{
+         display:inline;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+<!--Unordered HTML Lists-->
+<!--Style	Description-->
+<!--list-style-type:disc	The list items will be marked with bullets (default)-->
+<!--list-style-type:circle	The list items will be marked with circles-->
+<!--list-style-type:square	The list items will be marked with squares-->
+<!--list-style-type:none	The list items will not be marked-->
+<ul style ="list-style-type: square">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ul>
+
+<!--Ordered HTML Lists-->
+<!--Type	Description-->
+<!--type="1"	The list items will be numbered with numbers (default)-->
+<!--type="A"	The list items will be numbered with uppercase letters-->
+<!--type="a"	The list items will be numbered with lowercase letters-->
+<!--type="I"	The list items will be numbered with uppercase roman numbers-->
+<!--type="i"	The list items will be numbered with lowercase roman numbers-->
+<ol type="i" start="10" reversed>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ol>
+
+<!--HTML Description Lists-->
+<dl>
+    <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drink</dd>
+</dl>
+
+<!--Nested HTML Lists-->
+<!--List items can contain new list, and other HTML elements, like images and links, etc.-->
+<ul>
+    <li>Coffee</li>
+    <li>Tea
+        <ul>
+            <li>Black tea</li>
+            <li>Green tea</li>
+        </ul>
+    </li>
+    <li>Milk</li>
+</ul>
+
+<!--Horizontal Lists (см. style в head)-->
+
+<ul id="horline">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>PHP</li>
+</ul>
+
+
+</body>
+</html>
