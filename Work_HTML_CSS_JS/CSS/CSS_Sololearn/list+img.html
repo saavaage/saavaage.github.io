@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <style>
+        ul {
+            list-style-type: none;
+        }
+        ul li::before {
+            content: url("http://www.sololearn.com/images/bullet.jpg");
+            display: inline-block;
+            margin-right: 2px;
+        }
+    </style>
+
+    <title>Title</title>
+</head>
+<body>
+<h2>Список с внешними маркерами-рисункамию вариант-1</h2>
+<ul>
+    <li>first</li>
+    <li>second</li>
+    <li>third</li>
+    <li>fourth</li>
+</ul>
+<h2>Список с внешними маркерами-рисункамию вариант-2</h2>
+<ol style="list-style-image:url(http://www.sololearn.com/images/bullet.jpg);">
+<li>first</li>
+<li>second</li>
+<li>third</li>
+<li>fourth</li>
+</ol>
+
+</body>
+</html>
