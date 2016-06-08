@@ -1,0 +1,301 @@
+body {
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+h1{
+    font-size:24pt;
+    text-align: center;
+    text-transform: uppercase;
+    color:#41525c;
+}
+ul {
+    width: 92%;
+    margin: auto;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+ul li {
+    position: relative;
+    text-align: left;
+    font-size: 15pt;
+    list-style-type: none;
+    padding: 4px 35px;
+    margin-bottom: 1px;
+    color: #a1a3aa;
+}
+
+ul li:nth-of-type(odd) {
+    background-color: #edf5fd;
+}
+
+ul li:nth-of-type(even) {
+    background-color: #f5f5f6;
+}
+
+ul li:before {
+    content:"";
+    background:url(marker.png) 0 3px no-repeat;
+    height: 20px; width:20px;
+    margin-left: -20px;
+    position: absolute;
+}
+.main1 .btn:hover,
+.main2 .btn:hover{
+    box-shadow: none;
+    color:#16436a;
+}
+.main .btn:hover{
+    box-shadow: none;
+    color:#b1561b;
+}
+
+.wrapper{
+    padding:auto;
+    margin: 50px;
+    text-align: center;
+    position: relative;
+}
+/*данные по контейнеру 1*/
+.container1 {
+    width: 310px;
+    background-color: #37c2d3;
+    border-radius: 5px;
+    border: 1px solid #e8eaec;
+    display:inline-block;
+}
+
+.container1 p:first-of-type {
+    text-transform: uppercase;
+    font-size: 20pt;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    padding: 17px 0;
+}
+
+.main1 {
+    margin: auto;
+    background-color: #fff;
+    width: 100%;
+    padding-bottom: 15px;
+
+}
+
+.main1 p.name1 {
+    text-transform: uppercase;
+    font-size: 20pt;
+    font-weight: normal;
+    margin: 0 auto;
+    padding: 17px 0 5px 0;
+    text-align: center;
+    color: #41525c;
+    margin-bottom: 5px;
+}
+
+.main1 p.price1 {
+    margin-top: 0;
+    color: #41525c;
+    text-align: center;
+}
+
+.main1 p.price1 span:nth-of-type(2) {
+    font-weight: bold;
+    font-size: 66pt;
+    position: relative;
+}
+
+.main1 p.price1 span:first-of-type {
+    position: relative;
+    left: 0;
+    top: -39pt;
+    font-size: 18pt;
+
+}
+
+.main1 p.price1 span:last-of-type {
+    vertical-align: sub;
+    font-size: 18pt;
+}
+
+.main1 .btn{
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14pt;
+    color: #fff;
+    background-color: #3371a6;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px #16436a;
+}
+
+/*данные по контейнеру основному*/
+.container {
+    width: 310px;
+    background-color: #ee8129;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgb(214, 242, 232), -3px -3px 3px rgb(214, 242, 232);
+    padding-bottom: 5px;
+    display:inline-block;
+    /*margin-left: -40px;*/
+    position: relative;
+    z-index: 1;
+    transform: scale(1.05);
+
+}
+
+.container p:first-of-type {
+    text-transform: uppercase;
+    font-size: 20pt;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    padding: 17px 0;
+}
+
+.main {
+    margin: auto;
+    background-color: #fff;
+    width: 97%;
+    padding-bottom: 15px;
+
+}
+
+.main p.name {
+    text-transform: uppercase;
+    font-size: 20pt;
+    font-weight: normal;
+    margin: 0 auto;
+    padding: 17px 0 5px 0;
+    text-align: center;
+    color: #41525c;
+    margin-bottom: 5px;
+}
+
+.main p.price {
+    margin-top: 0;
+    color: #41525c;
+    text-align: center;
+}
+
+.main p.price span:nth-of-type(2) {
+    font-weight: bold;
+    font-size: 66pt;
+    position: relative;
+}
+
+.main p.price span:first-of-type {
+    position: relative;
+    left: 0;
+    top: -39pt;
+    font-size: 18pt;
+
+}
+
+.main p.price span:last-of-type {
+    vertical-align: sub;
+    font-size: 18pt;
+}
+
+.main .btn {
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14pt;
+    color: #fff;
+    background-color: #ee8129;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px #b3560b;
+}
+
+/*данные по контейнеру 2*/
+.container2 {
+    width: 310px;
+    background-color: #1cb79a;
+    border-radius: 5px;
+    border: 1px solid #e8eaec;
+    display:inline-block;
+    /*margin-left: -40px;*/
+}
+
+.container2 p:first-of-type {
+    text-transform: uppercase;
+    font-size: 20pt;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    padding: 17px 0;
+}
+
+.main2 {
+    margin: auto;
+    background-color: #fff;
+    width: 100%;
+    padding-bottom: 15px;
+
+}
+
+.main2 p.name2 {
+    text-transform: uppercase;
+    font-size: 20pt;
+    font-weight: normal;
+    margin: 0 auto;
+    padding: 17px 0 5px 0;
+    text-align: center;
+    color: #41525c;
+    margin-bottom: 5px;
+}
+
+.main2 p.price2 {
+    margin-top: 0;
+    color: #41525c;
+    text-align: center;
+}
+
+.main2 p.price2 span:nth-of-type(2) {
+    font-weight: bold;
+    font-size: 66pt;
+    position: relative;
+}
+
+.main2 p.price2 span:first-of-type {
+    position: relative;
+    left: 0;
+    top: -39pt;
+    font-size: 18pt;
+
+}
+
+.main2 p.price2 span:last-of-type {
+    vertical-align: sub;
+    font-size: 18pt;
+}
+
+
+
+.main2 .btn{
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14pt;
+    color: #fff;
+    background-color: #3371a6;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px #16436a;
+}
+

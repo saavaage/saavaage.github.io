@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var password;
+    var quest = prompt("Введите ваш логин", "ввести здесь");
+    if (quest == "Админ") {
+        password = prompt("Enter your password:", "enter here, please");
+        if (password == "Черный Властелин") {
+            alert("Добро пожаловать!");
+        } else if (password == null) {
+            alert("Вход отменен");
+        } else {
+            alert("Пароль не верен!");
+        }
+    } else if (quest == null) {
+        alert("Вход отменен!");
+    } else{
+        alert("Я Вас не знаю!");
+    }
+
+</script>
+</body>
+</html>

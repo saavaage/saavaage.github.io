@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 16px;
+}
+
+/*ОФОРМЛЕНИЕ НАВИГАЦИИ*/
+nav {
+    max-width: 1020px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+nav .logo {
+    font-size: 2.2em;
+    height: 115px;
+    line-height: 115px;
+    margin: 0;
+    margin-right: 100px;
+    display: inline-block;
+}
+
+nav .logo p {
+    margin: 0;
+    padding: 0;
+}
+
+nav .logo span:first-of-type {
+    color: #f09556;
+    margin-right: 15px;
+}
+
+nav .logo span:last-of-type {
+    color: #3070a8;
+    text-transform: uppercase;
+}
+
+nav ul {
+    height: 115px;
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    font-size: 1em;
+    text-transform: uppercase;
+    height: 115px;
+    line-height: 115px;
+    margin: 0 7px;
+    padding: 0 7px;
+    display: block;
+    font-weight: bold;
+    color: #989898;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #3070a8;
+    border-bottom: 5px solid #3070a8;
+}
+
+/*Оформление БАННЕРА*/
+.banner {
+    margin-top: 3px;
+    background: url(images/gt_banner.jpg) no-repeat;
+    min-height: 585px;
+    background-size: 100% auto;
+    text-align: center;
+    color: #fff;
+    padding-top: 150px;
+}
+
+.banner p:first-of-type {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1020px;
+    font-size: 3rem;
+    padding:0 350px;
+    text-transform: uppercase;
+}
+
+.banner p span {
+    font-size: 2.2rem;
+    text-transform: none;
+}
+
+.banner p:nth-of-type(2) {
+    font-weight:normal;
+    font-size: 1.2rem;
+    font-style: italic;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.banner .button p {
+    font-weight:normal;
+    font-size: 1.25rem;
+    padding: 10px 0;
+    width: 240px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    border:1px solid #8c9da9;
+    border-radius: 2px;
+    box-shadow: 0 0 5px #fff;
+}
+.banner .button p:hover{
+    background-color: #3070a8;
+    box-shadow:none;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <!--<link href='https://fonts.googleapis.com/css?family=Economica:400,700,700italic,400italic' rel='stylesheet' type='text/css'>-->
+
+    <title>Title</title>
+    <style>
+        body{
+            font-family: Impact, sans-serif;
+        }
+        nav{
+            background-color: #a64dff;
+            position: relative;
+        }
+        nav ul{
+            list-style-type: none;
+            width:900px;
+            text-align: center;
+        }
+        nav ul li{
+            font-size:1.2em;
+            text-transform: uppercase;
+            margin:0 7px;
+            padding: 5px 10px;
+            list-style-type: none;
+            color: #fff;
+            display: inline-block;
+
+        }
+        nav ul li:hover{
+            background-color: #eeeeee;
+            color: #a0a0a0;
+        }
+        nav ul li ul li:hover {
+            background-color: #a0a0a0;
+            color: #eeeeee;
+        }
+        nav ul li:nth-child(5) ul,
+        nav ul li:nth-child(7) ul{
+            display:none;
+        }
+
+        nav ul li:nth-child(5):hover ul{
+            position: absolute;
+            top:33px;
+            left:0;
+            padding:0;
+            width:100%;
+            background-color: #eeeeee;
+            display:inline-block;
+        }
+        nav ul li:nth-child(7):hover ul{
+            position: absolute;
+            width:100%;
+            top:33px;
+            left:0;
+            padding:0;
+            background-color: #eeeeee;
+            display:inline-block;
+        }
+        nav ul li ul li{
+            color: #a0a0a0;
+            font-size: 0.8em;
+            text-transform: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<nav>
+
+    <ul>
+        <li>Home</li>
+        <li>News</li>
+        <li>Economic</li>
+        <li>Local</li>
+        <li>Sport
+            <ul>
+                <li>Box</li>
+                <li>Sprint</li>
+                <li>Jumps</li>
+                <li>Football</li>
+                <li>Basketball</li>
+            </ul>
+        </li>
+        <li>Culture</li>
+        <li>Travels
+            <ul>
+                <li>Crimea</li>
+                <li>Kaukaz</li>
+                <li>Urals</li>
+                <li>Karelia</li>
+            </ul>
+        </li>
+    </ul>
+    
+</nav>
+</body>
+</html>

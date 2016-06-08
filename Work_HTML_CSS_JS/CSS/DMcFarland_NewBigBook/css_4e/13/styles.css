@@ -128,3 +128,31 @@ footer a {
 	color: white;	
 }
 /* стили из практикума главы 13  */
+* {
+	box-sizing: border-box;
+}
+.sidebar1{
+	float:left;
+	width:20%;
+	padding: 0 20px 0 10px;
+}
+.main{
+	float: left;
+	width: 60%;
+	padding: 0 20px 0 20px;
+	border-left: dashed 1px rgb(153,153,153);
+	border-right: dashed 1px rgb(153,153,153);
+}
+.sidebar2{
+	float:right;
+	width:20%;
+	padding: 0 10px 0 10px;
+}
+footer {
+	clear: both;
+}
+
+nav ul, header h1, footer p, .contentWrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
