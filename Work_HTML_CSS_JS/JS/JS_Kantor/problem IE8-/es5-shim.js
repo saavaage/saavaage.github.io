@@ -217,7 +217,7 @@
             //   15.3.4.5.1.
             // 13. Set the [[Construct]] internal property of F as described in
             //   15.3.4.5.2.
-            // 14. Set the [[HasInstance]] internal property of F as described in
+            // js1. Set the [[HasInstance]] internal property of F as described in
             //   15.3.4.5.3.
             var bound;
             var binder = function () {
@@ -678,7 +678,7 @@
         }
     }, !reduceRightCoercesToObject);
 
-    // ES5 15.4.4.14
+    // ES5 15.4.4.js1
     // http://es5.github.com/#x15.4.4.14
     // https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/indexOf
     var hasFirefox2IndexOfBug = ArrayPrototype.indexOf && [0, 1].indexOf(1, 2) !== -1;
@@ -920,7 +920,7 @@
     }());
     defineProperties(ArrayPrototype, { push: pushShim }, pushUndefinedIsWeird);
 
-    // ES5 15.2.3.14
+    // ES5 15.2.3.js1
     // http://es5.github.io/#x15.4.4.10
     // Fix boxed string bug
     defineProperties(ArrayPrototype, {
@@ -971,7 +971,7 @@
     // ======
     //
 
-    // ES5 15.2.3.14
+    // ES5 15.2.3.js1
     // http://es5.github.com/#x15.2.3.14
 
     // http://whattheheadsaid.com/2010/10/a-safer-object-keys-compatibility-implementation
@@ -1754,7 +1754,7 @@
     // ======
     //
 
-    // ES5 15.5.4.14
+    // ES5 15.5.4.js1
     // http://es5.github.com/#x15.5.4.14
 
     // [bugfix, IE lt 9, firefox 4, Konqueror, Opera, obscure browsers]

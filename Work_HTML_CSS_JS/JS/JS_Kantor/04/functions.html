@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function count() {
+        // переменные i,j не будут уничтожены по окончании цикла
+        for (var i = 0; i < 3; i++) {
+            var j = i * 2;
+        }
+        alert( i ); // i=3, последнее значение i, при нём цикл перестал работать
+        alert( j ); // j=4, последнее значение j, которое вычислил цикл
+    }
+    count();
+
+</script>
+</body>
+</html>
