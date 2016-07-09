@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+//    РЕКУРСИЯ
+//Арифметическая прогрессия
+//версия1
+    function sumTo1(number){
+        if(number !==0){
+            return number +sumTo1(number-1);
+        }else{
+            return number;
+        }
+    }
+   console.log(sumTo1(4));
+
+
+//версия2
+function sumTo2(number){
+    if(number ==1){
+        return 1;
+    }else{
+        return number +sumTo2(number-1);
+    }
+}
+console.log(sumTo2(3));
+
+
+
+</script>
+
+</body>
+</html>

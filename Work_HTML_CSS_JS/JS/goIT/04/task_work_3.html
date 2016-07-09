@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //    Рандом из интервала от 0 до заданного числа
+
+    function One(num1) {
+        while (true) {
+            var result = Math.ceil(Math.random() * num1);
+            if (result <= num1 && result !== 0) {
+                return result;
+                break;
+            }
+        }
+    }
+//    alert(One(15));
+
+
+    //    Рандом из интервала от 1 числа до 2  числа
+
+    function OneTwo(num1, num2) {
+
+//        while (true) {
+            var result = num1 + Math.round(Math.random() * (num2-num1));
+//            if (result >= num1 && result <= num2 ) {
+                return result;
+//                break;
+//            }
+
+//        }
+    }
+
+    alert(OneTwo(-2,1));
+
+
+
+
+</script>
+
+</body>
+</html>
