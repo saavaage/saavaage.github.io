@@ -8,14 +8,22 @@
 </head>
 <body>
 <script>
-   var anyNumber = + prompt('Введите любое целое число?');
-if(anyNumber>0){
-    alert(1);
-}else if(anyNumber<0){
-    alert(-1);
-}else{
-    alert(0);
-}
+//    ## Задачка 2
+//    console.log(min(2, 5)); //2
+//    console.log(min(3, -1)); //-1
+
+    function minTwo(a,b){
+
+        if(a<b){
+            return a;
+        }else if(a>b){
+            return b;
+        }else{
+            return 'a=b';
+        }
+
+    }
+    alert(minTwo(2,5));
 
 
 </script>

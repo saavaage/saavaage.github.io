@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    ## Задание 6 (pow)
+    //    Напишите функцию `pow(x,n)`, которая возвращает `x` в степени `n`.
+    // Иначе говоря, умножает `x` на себя `n` раз и возвращает результат.
+
+    //            ```
+    //pow(3, 2) = 3 * 3 = 9
+    //pow(1, 100) = 1 * 1 * ...* 1 = 1
+
+    function pow(x, n) {
+        var result = 1;
+        for (var i = 1; i <= n; i++) {
+            result *= x;
+        }
+        return result;
+    }
+    alert(pow(2, 5));
+
+</script>
+</body>
+</html>

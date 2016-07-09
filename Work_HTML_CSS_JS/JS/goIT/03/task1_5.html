@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    ## Задание 5 (Шахматная доска)
+    //
+    //    Напишите программу, создающую строку, содержащую решётку `8х8`, в
+    //    которой линии разделяются символами новой строки. На каждой позиции
+    //    либо пробел, либо `\#`. В результате должна получиться шахматная доска.
+    //
+    //            ```
+    //# # # #
+    // # # # #
+    //# # # #
+    // # # # #
+    //# # # #
+    // # # # #
+    //# # # #
+    // # # # #
+    //```
+    //
+    //    Когда справитесь, сделайте размер доски переменным, чтобы можно было
+    //    создавать доски любого размера.
+
+    function chess(r, p) {
+        for (var i = 1; i <= r; i++) {
+            if (i % 2 !== 0) {
+                for (var k = 1; k <= p; k++) {
+                    if (k % 2 !== 0) {
+                        document.write('\#');
+                    } else {
+                        document.write('&ensp;');
+                    }
+                }
+
+                document.write('<br/>')
+            }
+            else {
+
+                for (var n = 1; n <= p; n++) {
+                    if (n % 2 !== 0) {
+                        document.write('&ensp;');
+                    } else {
+                        document.write('\#');
+                    }
+                }
+
+                document.write('<br/>')
+
+            }
+        }
+    }
+        chess(8, 8);
+
+</script>
+</body>
+</html>

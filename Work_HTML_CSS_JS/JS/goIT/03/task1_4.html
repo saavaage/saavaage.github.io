@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    ## Задание 4 (FizzBuzz 2)
+//    Исправьте предыдущую задачу `FizzBuzz` так, чтобы она выводила `«FizzBuzz»` для всех
+//    чисел, которые делятся и на `3`, и на `5`.
+
+
+    function getFizzBuzz(a, b) {
+
+        for (var i = a; i <= b; i++) {
+            if (i % 5 == 0 || i % 3 == 0) {
+                console.log(i + ' - FizzBuzz');
+            } else
+                console.log(i);
+        }
+    }
+    getFizzBuzz(1, 100);
+
+</script>
+</body>
+</html>
