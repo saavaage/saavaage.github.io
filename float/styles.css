@@ -1,0 +1,340 @@
+/* сброс стилей браузера */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1.2;
+}
+
+ol {
+    padding-left: 1.4em;
+    list-style: decimal;
+}
+
+ul {
+    padding-left: 1.4em;
+    list-style: square;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* конец кода сброса стилей браузера */
+
+body {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background: black;
+}
+
+/*Настройка Шапки*/
+.container {
+    padding: 10px 20px;
+    background: red;
+    background: linear-gradient(to bottom, red, rgb(0, 0, 0) 200px);
+}
+/*настройка Заголовка*/
+head {
+   padding-top: 20px;
+}
+.logo {
+    float: left;
+}
+header h1 {
+    text-align: right;
+    line-height: 2.2em;
+    font-size: 2.2em;
+    margin-left: 20px;
+    color: rgb(255, 255, 255);
+}
+/*Настройка Навигации*/
+input {
+    display: none;
+}
+.nav {
+    text-align: right;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c95e00;
+}
+.nav li {
+    display: inline;
+}
+.nav li {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1em;
+    color: #ffffff;
+    padding: 5px 7px;
+    background: #ff932d;
+    border-radius: 5px;
+    border: 1px solid #c95e00;
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
+    text-shadow: 0px -1px 1px rgba(000, 000, 000, 0.2),
+    0px 1px 0px rgba(255, 255, 255, 0.3);
+}
+.nav li:nth-child(9),
+ .nav li:nth-child(10),
+ .nav li:nth-child(11){
+     background: blue;
+ }
+.nav li:hover {
+    background-color: red;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.nav li a{
+    text-decoration: none;
+    font-size: 1em;
+    color: #ffffff;
+}
+
+#ex123:checked ~ .nav li:nth-child(1),
+#ex132:checked ~ .nav li:nth-child(2),
+#ex213:checked ~ .nav li:nth-child(3),
+#ex231:checked ~ .nav li:nth-child(4),
+#ex312:checked ~ .nav li:nth-child(5),
+#ex321:checked ~ .nav li:nth-child(6),
+#vertital:checked ~ .nav li:nth-child(7),
+#images:checked ~ .nav li:nth-child(8),
+#check:checked ~ .instruction label
+ {
+    background-color: green;
+}
+/*Блок оветов*/
+.answer {
+    margin: 40px 20px;
+    padding: 10px;
+    border: 3px solid orange;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color: green;
+    width: 30%;
+    float: left;
+}
+.answer .result {
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: darkgray;
+    min-height: 50px;
+    border: 1px solid orange;
+    border-radius: 5px;
+}
+.answer .description {
+    text-align: left;
+    padding: 10px;
+    color: darkgray;
+    min-height: 50px;
+    border: 1px solid orange;
+    border-radius: 5px;
+ }
+.answer p {
+   font-size: 1em;
+}
+
+/*Блок демонстрации*/
+.demo {
+    margin: 40px 20px;
+    min-height: 192px;
+    border: 3px solid orange;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color: rebeccapurple;
+    width: 58%;
+    float: left;
+    position: relative;
+}
+.one {
+    width: 80%;
+    border: 3px solid red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.imp {
+    font-size: 1.5em;
+    width: 80%;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.imp,.images,.images_correct,
+.instruction{
+    display: none;
+}
+.two {
+    margin: 2px;
+    width: 80%;
+    border: 3px solid green;
+}
+.three {
+    margin: 2px;
+    width: 80%;
+    border: 3px ridge orange;
+}
+/*Картинки по умолчанию*/
+
+.images,.images_correct{
+    margin: 40px 20px;
+    width:55%;
+    min-height: 1000px;
+    border: 3px solid orange;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    float:right;
+}
+.images img{width:100%;}
+
+/*Оформление описательной части картинок*/
+.instruction {
+    margin: 40px 20px;
+    padding: 10px;
+    border: 3px solid orange;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color: green;
+    width: 30%;
+    float: left;
+}
+.instruction .what {
+    text-align: left;
+    color: darkgray;
+    min-height: 50px;
+    border: 1px solid orange;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.instruction label{
+    font-size: 1em;
+    color: #ffffff;
+    padding: 5px 7px;
+    background: #ff932d;
+    border-radius: 5px;
+    border: 1px solid #c95e00;
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
+    text-shadow: 0px -1px 1px rgba(000, 000, 000, 0.2),
+    0px 1px 0px rgba(255, 255, 255, 0.3);
+}
+
+.instruction label:hover {
+    background-color: red;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+#check:checked+label
+{
+    background-color: green;
+}
+
+.instruction .code {
+    text-align: left;
+    color: darkgray;
+    min-height: 50px;
+    border: 1px solid orange;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/*---------------*/
+/*РАБОТА*/
+/*1-2-3*/
+#ex123:checked ~ .demo .one {display: block;}
+/*#ex123:checked ~ .demo .one {Float: left;}*/
+#ex123:checked ~ .demo .two {float: right;}
+#ex123:checked ~ .demo .three {float: right;}
+#ex123:checked ~ .answer .result p:after {content: "1-float:default; 2-float:right; 3-float:right;"}
+#ex123:checked ~ .answer .description p:after {content: "Выравнивание делаем за счет блоков, цифры рассматриваем как текст!!!"}
+/*1-3-2*/
+#ex132:checked ~ .demo .one {display: block;}
+/*#ex132:checked ~ .demo .one {Float: left;}*/
+#ex132:checked ~ .demo .two {float: right;}
+#ex132:checked ~ .demo .three {float: left;}
+#ex132:checked ~ .answer .result p:after {content: "1-float:default; 2-float:right; 3-float:left;"}
+#ex132:checked ~ .answer .description p:after {content: "Выравнивание делаем за счет блоков, цифры рассматриваем как текст!!!"}
+/*2-1-3*/
+#ex213:checked ~ .demo .imp {display: block;}
+#ex213:checked ~ .demo .one {display: none;}
+#ex213:checked ~ .answer .result p:after {content: "Через float эта задача не решается"}
+#ex213:checked ~ .answer .description p:after {content: "Мы не можем разместить 1 между 2 и 3, не разбив блок 2!"}
+
+/*2-3-1*/
+#ex231:checked ~ .demo .one {display: block;}
+/*#ex231:checked ~ .demo .one {Float: right;}*/
+#ex231:checked ~ .demo .two {float: left;}
+#ex231:checked ~ .demo .three {float: right;}
+#ex231:checked ~ .answer .result p:after {content: "1-float:default; 2-float:left; 3-float:right;"}
+#ex231:checked ~ .answer .description p:after {content: "Выравнивание делаем за счет блоков, цифры рассматриваем как текст!!!"}
+
+/*3-1-2*/
+#ex312:checked ~ .demo .imp {display: block;}
+#ex312:checked ~ .demo .one {display: none;}
+#ex312:checked ~ .answer .result p:after {content: "Через float эта задача не решается"}
+#ex312:checked ~ .answer .description p:after {content: "Мы не можем разместить 1 между 3 и 2, не разбив блок 2!"}
+
+/*3-2-1*/
+#ex321:checked ~ .demo .one {display: block;}
+/*#ex321:checked ~ .demo .one {Float: right;}*/
+#ex321:checked ~ .demo .two {float: left;}
+#ex321:checked ~ .demo .three {float: left;}
+#ex321:checked ~ .answer .result p:after {content: "1-float:default; 2-float:left; 3-float:left;"}
+#ex321:checked ~ .answer .description p:after {content: "Выравнивание делаем за счет блоков, цифры рассматриваем как текст!!!"}
+
+/*vertical*/
+#vertital:checked ~ .answer .result p:after {content: "Выстраивать блоки по вертикали - нельзя, единственно возможный вариант - дефолтный."}
+#vertital:checked ~ .answer .description p:after {content: "Мы не можем за счет чистого float в произвольном порядке спозиционировать блоки по вертикали!"}
+
+/*default*/
+.answer .result p:after {content: "По умолчанию все элементы, включая блоки, выстроены по вертикали в порядке следования в html"}
+.answer .description p:after {content: "Необходимо помнить, что по умолчанию, любой блок занимает всю линию!"}
+
+/*картинки*/
+#images:checked ~ .demo {display: none;}
+#images:checked ~ .answer {display: none;}
+#images:checked ~ .images figure{
+    font-size: .7em;
+    display:block;
+    float:left;
+    margin:4px;
+    text-align: center;
+    width:30%;
+}
+#images:checked ~ .images{display: block;}
+
+#images:checked ~ .instruction{display: block;}
+
+#check:checked~ .instruction .code p:after{
+    content:"У <figure> удалить свойство: float:left и добавить свойства: display:inline-block; и vertical-align:top"
+}
+#check:checked~ .demo,
+#check:checked~ .answer,
+#check:checked~ .images{display:none;}
+#check:checked ~ .images figure{
+    font-size: .7em;
+    display:inline-block;
+    vertical-align: top;
+    margin:4px;
+    text-align: center;
+    width:30%;
+}
+#check:checked ~ .instruction, #check:checked~ .images{display: block;}
