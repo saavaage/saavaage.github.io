@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+
+    <style>
+        .first{
+            position: relative;
+            z-index:5;
+            background-color: yellow;
+            height: 100px;
+            width:150px;
+        }
+        .second{
+            position: relative;
+            z-index:2;
+            background-color: orange;
+            height: 150px;
+            width:150px;
+            top:-50px;
+        }
+
+        .third{
+            position: absolute;
+            z-index:4;
+            background-color: black;
+            height: 200px;
+            width:100px;
+            top:50px;
+        }
+        .third_1{
+            position: relative;
+            z-index:6;
+            background-color: green;
+            height: 150px;
+            width:50px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<div class="first"></div>
+<div class="second"></div>
+<div class="third">
+    <div class="third_1"></div>
+
+</div>
+
+
+</body>
+</html>
