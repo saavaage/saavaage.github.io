@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="туризм водный горный пеший">
+    <meta name="description" content="водный туризм">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Водный туризм</title>
+    <!--[if lt IE 9]>
+    <script src="../scripts/html5shiv/html5shiv.js"></script>
+    <script src="../scripts/css3-mediaqueries/css3-mediaqueries.js"></script>
+    <script src="../scripts/querySelector.polyfill.js"></script>
+    <script src="../scripts/eventListenerIEPolyfill.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 10]>
+    <script src="../scripts/classList.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../scripts/jquery/jquery-1.9.0.min.js"></script>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/siteStyle.css">
+
+</head>
+<body class="raftingPage">
+
+<!-- ШАПКА ------------------------------------------------------------------------------------------------------------->
+<header class="main-header container">
+    <!-- панель навигации-->
+    <nav class="main-nav">
+        <div class="home"><a href="../index.html"><img src="../images/logo_white.png"
+                                                       alt="логотип, переход на стартовую страницу"
+                                                       height="24"> <span>&#8801</span></a></div>
+        <ul class="main-nav-top">
+            <li class="rafting"><a href="#">Водный</a></li>
+            <li class="hiking"><a href="#">Горный</a></li>
+            <li class="tracking"><a href="#">Пеший</a></li>
+            <li class="addInfo"><a href="#">Доп инфо &#8595</a>
+                <ul class="main-nav-sub">
+                    <li class="articles"><a href="articles.html">Статьи</a></li>
+                    <li class="reports"><a href="reports.html">Отчеты</a></li>
+                    <li class="news"><a href="news.html">Новости</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- user - блок-->
+    <div class="user-block">
+        <a class="login" href="login.html" target="_blank"><span class="login-text">Вход</span></a>
+    </div>
+
+    <!--хлебные крошки-->
+    <ul class="breadcrumbs">
+        <li><a href="../index.html">Главная</a><span></span></li>
+        <li class="current"><a href="#">Активная</a><span></span></li>
+    </ul>
+    <!--конец хлебных крошек-->
+
+</header> <!-- шапка конец -->
+
+
+<!--ОСНОВНОЙ КОНТЕНТ---------------------------------------------------------------------------------------------------->
+<main class="main-info container">
+
+    <section class="expeditions container">
+
+        <!--аннонс новых маршрутов и слайдер-->
+        <div class="expeditions-announces left">
+            <h2>Сплавы 2016г.</h2>
+            <header class="slider-header">
+                <h3>Пошли в поход! Запись в группы</h3>
+                <time datetime="2016"> Даты: см. предложения</time>
+            </header>
+
+            <div id="wrapper">
+                <div class="slider-wrapper theme-default">
+                    <!--начало слайдера-->
+                    <div id="slider" class="nivoSlider">
+                        <a href="raftingRoutes.html" target="_blank"><img
+                                src="../images/slides/slide_3.jpg" alt=""
+                                title="#caption3"
+                                data-transition="slideInRight"/></a>
+                        <a href="raftingRoutes.html" target="_blank"><img
+                                src="../images/slides/slide_5.jpg" alt=""
+                                title="#caption5"
+                                data-transition="slideInRight"/></a>
+                        <a href="raftingRoutes.html" target="_blank"><img
+                                src="../images/slides/slide_6.jpg" alt=""
+                                title="#caption6"
+                                data-transition="slideInRight"/></a>
+                    </div>
+
+                    <div id="caption3" class="nivo-html-caption">Кавказ: р.Кубань, сплав, 3кт. 6&ndash;15 чел.,
+                        6 &frasl;06&mdash;12 &frasl;08<a href="raftingRoutes.html" target="_blank"> запись в группу</a></div>
+                    <div id="caption5" class="nivo-html-caption">Кавказ: р.Белая, сплав, 4кт., 6&ndash;20 чел.,
+                        01 &frasl;05&mdash;18 &frasl;05 <a href="raftingRoutes.html" target="_blank"> запись в группу</a></div>
+                    <div id="caption6" class="nivo-html-caption"><strong>Кольский п&ndash;в: р.Умба,</strong> сплав,
+                        2кт, 6&ndash;12чел., 18 &frasl;06&mdash;03&frasl;07 <a href="raftingRoutes.html" target="_blank"> запись в группу</a>
+                    </div>
+
+                    <p>Актуальную информацию по конкретному походу можно получить либо кликнув по изображению на
+                        слайдере, либо
+                        перейдя по ссылке в описательной части слайда.</p>
+                </div>
+
+            </div>
+
+        </div> <!-- слайдер конец -->
+
+        <div class="expeditions-reports right">
+            <h2>Отчеты о сплавах</h2>
+
+            <article class="reports-article">
+                <header class="reports-header">
+                    <h3>Кольский п&ndash;в. Сплав к Белому морю</h3>
+                    <time datetime="2015-07-08"> Даты: 18&frasl;07&mdash;08&frasl;08&frasl;2015</time>
+                </header>
+
+                <img src="../images/reports/report1.jpg" alt="сплав на Кольском п-ве 2015 год">
+                <p>Маршрут сплава: реки: Куреньга&ndash;Печа&ndash;Симба&ndash;Чуда&ndash;Умба (Кольский п&ndash;в,
+                    Мурманская
+                    область, РФ).</p>
+                <p>Сложность: 4кт. (пороги 3&ndash;4 кт.)</p>
+                <p>8&ndash;мест. рафт, 5чел., 232,8км (обносы&frasl;волоки &ndash; 11,3км).</p>
+                <span class="right"><a class="arrow-circle blue" data-text="читать далее" href="report1.html"
+                                       target="_blank">читать далее</a></span>
+                <span class="left"><a class="arrow-circle blue" data-text="читать другие отчеты"
+                                      href="reports.html" target="_blank">другие отчеты</a></span>
+
+            </article>
+        </div>
+    </section>
+
+    <section class="info container">
+        <h2>Статьи про водный туризм</h2>
+
+        <article class="info-article">
+            <header class="info-header">
+                <h3>Формирование походной аптечки</h3>
+                <time datetime="2015-08-28">Дата: 28&frasl;08&frasl;2015</time>
+            </header>
+            <!--версия mp4 на первом месте, так как в некоторых старых версиях-->
+            <!--Mobile Safari на iPad есть ошибка — они распознают только первый элемент  <source> ,-->
+            <!--и если первым указано не видео в формате mp4, оно не воспроизводится.-->
+            <video width="300" controls="controls" poster="../images/info-articles/medicine.jpg">
+                <source src="../images/info-articles/aptechka.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                <source src="../images/info-articles/aptechka.webm" type='video/webm; codecs="vp8, vorbis"'>
+                Элемент video не поддерживается вашим браузером.<a href="../images/info-articles/aptechka.mp4">Скачайте
+                видео</a>.
+            </video>
+            <p>Состав и качество аптечки для туриста иногда является вопросом жизни и смерти.</p>
+            <p>В условиях полной автономки, когда некому прийти на помощь группе, все зависит только от вас и
+                вашей подготовки.</p>
+            <p>Одним из важнейших элементов грамотной подготовки к походу является формирование аптечки.</p>
+            <p>Кроме данного видео, в статье дается список конкретных лекарств для длительного автономного
+                похода как группы, так и индивидульной аптечки конктерного туриста.</p>
+            <span class="right"><a class="arrow-circle blue" data-text="читать далее" href="article1.html"
+                                   target="_blank">читать далее</a></span>
+            <span class="left"><a class="arrow-circle blue" data-text="читать другие статьи" href="articles.html"
+                                  target="_blank">другие статьи</a></span>
+        </article>
+
+        <article class="info-article">
+                <header class="info-header">
+                    <h3>Порядок движения на воде</h3>
+                    <time datetime="2014-06-21">Дата: 21&frasl;06&frasl;2014</time>
+                </header>
+                <img src="../images/info-articles/info3.jpg" alt="Водный туризм. Порядок движения на воде">
+                <p>Важно, чтобы в походе соблюдался определенный распорядок дня, включающий время подъема и завтрака,
+                    ходовое время (6&ndash;часов), привал на обед, ужин, ночной отдых.</p>
+                <p>Разбивку лагеря на ночевку и ужин следует производить в светлое время дня.</p>
+                <p>При движении необходимо чередовать работу с отдыхом. В несложных походах обычно после 50мин. работы устраивают 10&ndash;минутную паузу, а раз в два часа&ndash;
+                    береговую разминку.</p>
+                <span class="right"><a class="arrow-circle blue" data-text="читать далее" href="article1.html" target="_blank">читать далее</a></span>
+                <span class="left"><a class="arrow-circle blue" data-text="читать другие статьи" href="articles.html" target="_blank">другие статьи</a></span>
+        </article>
+
+
+
+    </section>
+</main> <!-- основной контент - конец  -->
+
+<!--БОКОВАЯ ПАНЕЛЬ НОВОСТЕЙ----------------------------------------------------------------------------------------------->
+<aside class="main-aside">
+    <a class="btn-news" href="news.html">News!</a>
+
+    <section class="main-aside-news">
+        <h3 class="main-aside-title">Горячие новости!</h3>
+        <article>
+            <header class="aside-news-header">
+                <h5>Заполярный Урал. Инта</h5>
+                <time datetime="2016-06-27">Дата:27&frasl;06&frasl;2016</time>
+            </header>
+            <img src="../images/news/news1.jpg" alt="уровень воды в уральских реках">
+            <p>По сообщениям коллег, в этом году небывало высокий <em>уровень воды в местных реках (подъем до
+                1.5м&ndash;2м).</em> Много подтопленных стоянок. Внимание! По течению часто встречаются завалы!</p>
+        </article>
+
+        <article>
+            <header class="aside-news-header">
+                <h5>Алтай&ndash;горят леса! р&ndash;н Аргут и Башкаус</h5>
+                <time datetime="2016-06-19">Дата: 19&frasl;06&frasl;2016</time>
+            </header>
+            <img src="../images/news/news2.jpg" alt="алтай горит, штрафы">
+            <p>Алтай горит. МЧС ввело запрет на посещение лесов и костры в неположенных местах. <em>Штрафы за
+                разжигание костров и рубку леса&ndash;до 30000 рос. руб.</em></p>
+        </article>
+
+        <article>
+            <header class="aside-news-header">
+                <h5>Корелия. Нашествие медведей</h5>
+                <time datetime="2016-06-16"> Дата: 16&frasl;06&frasl;2016</time>
+            </header>
+            <img src="../images/news/news3.jpg" alt="нашествие медведей в Карелии">
+            <p>Из&ndash;за небывало холодного лета сократилась кормовая база диких животных в КР. Участились случаи
+                появлений медведей в малых нп. Голодные звери выходят на тур&ndash;стоянки. За последнее время медведи
+                <em>замечены в районе порогов Кивиристи, Падун и Тещины зубы.</em></p>
+        </article>
+
+        <span class="left"><a class="arrow-circle blue" data-text="читать все новости" href="news.html"
+                              target="_blank">все новости</a></span>
+    </section>
+
+</aside> <!-- боковая панель - конец  -->
+
+
+<!--КОЛОНТИТУЛ----------------------------------------------------------------------------------------------------------->
+<footer class="main-footer container">
+    <section class="footer-social">
+        <p class="footer-title">Мы в сетях:</p>
+        <ul>
+            <li class="social-btn social-btn-fb"><a href="#" title="Facebook"></a></li>
+            <li class="social-btn social-btn-vk"><a href="#" title="Вконтакте"></a></li>
+            <li class="social-btn social-btn-yt"><a href="#" title="Youtube"></a></li>
+        </ul>
+    </section>
+
+    <section class="footer-contacts">
+        <p class="footer-title">Наши контакты:</p>
+        <ul>
+            <li class="social-btn social-btn-skype"><a href="skype:savage-1974?chat" title="Skype"></a></li>
+            <li class="social-btn social-btn-mail"><a href="mailto:savage1974@gmail.com" title="email"></a></li>
+            <li class="social-btn social-btn-phone"><a href="tel:+375296570131" title="телефон"></a></li>
+        </ul>
+    </section>
+
+    <section class="footer-copyright">
+        <p class="footer-title">Разработано:</p>
+        <div class="we-are">
+            <p>&copy; Cтудия &laquo;FrontUp&raquo;, 2016.</p>
+            <a href="map.html">Карта сайта</a>
+        </div>
+    </section>
+
+</footer> <!-- /footer конец -->
+
+<!--окно авторизации-->
+<div class="login-window">
+    <div class="login-window-close">&#10005;</div>
+    <h3 class="login-window-title">Окно Регистрации</h3>
+    <p>Введите пожалуйста свой логин и пароль.</p>
+    <form class="login-form" action="" method="post">
+        <input type="text" class="user" name="login" placeholder="ввести имя" required>
+        <input type="password" class="password" name="password" placeholder="ввести пароль" required>
+        <label class="remember-name"><input type="checkbox" name="remember" checked> Запомнить</label>
+
+        <a href="#" class="remind">Забыл пароль</a>
+        <button type="submit" class="btn">Войти</button>
+    </form>
+</div><!--окно авторизации конец-->
+
+
+<!--ПОДКЛЮЧЕНИЕ библиотек и активация СЛАЙДЕРА-->
+<script type="text/javascript" src="../scripts/slider/scripts/jquery.nivo.slider.js"></script>
+<script type="text/javascript">
+    $(window).load(function () {
+        $('#slider').nivoSlider();
+    });
+</script>
+
+<!--ПОДКЛЮЧЕНИЕ скрипта ОКНА АВТОРИЗАЦИИ-->
+<script src="../scripts/loginForm.js"></script>
+<!--ПОДКЛЮЧЕНИЕ скрипта Панели Новостей-->
+<script src="../scripts/newsPanel.js"></script>
+</body>
+</html>

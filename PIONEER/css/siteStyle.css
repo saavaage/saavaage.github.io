@@ -1,0 +1,2322 @@
+/*-----------------------------------------------Common---------------------------------------------------------------*/
+/*-----------------------------------------------Common---------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Базовые Шрифты, Цвета, Списки   */
+/*импортируем наш главный шрифт*/
+@import 'http://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&subset=cyrillic';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css';
+/*импорт дефолтной темы слайдера */
+@import url("../scripts/slider/themes/default/default.css");
+
+body {
+    font-family: 'Roboto', "Trebuchet MS", Arial, sans-serif;
+    font-size: 16px;
+    color: #1d3130; /*цвет шрифта пунктов меню по умолчанию */
+
+    background: dodgerblue;
+}
+
+a {
+    color: #1d3130; /*цвет шрифта ссылок по умолчанию */
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.container:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------HEADER---------------------------------------------------------------*/
+/*-----------------------------------------------HEADER---------------------------------------------------------------*/
+/*-----------------------------------------------HEADER---------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.main-header {
+    width: 80%;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+/*-----------------АКТИВНЫЕ Страницы  - выделение цветом активных страниц в меню--------------------------------------*/
+.raftingPage .rafting a,
+.hikingPage .hiking a,
+.trackingPage .tracking a,
+.articlesPage .articles a,
+.articlesPage .addInfo > a,
+.newsPage .news a,
+.newsPage .addInfo > a,
+.reportsPage .reports a,
+.reportsPage .addInfo > a,
+.loginPage .user-block a {
+    background: #175fc6;
+    color: #fff;
+}
+
+/* -------------НАСТРОЙКА МЕНЮ ---------------------------------------------------------------------------------------*/
+/*базовые настройки*/
+.main-nav {
+    float: left;
+    width: 85%;
+    margin: 0;
+    position: relative;
+    z-index: 101;
+
+    background: #fdfdfd;
+    background: rgba(253, 253, 253, .9);
+    border-radius: 0 0 0 5px;
+}
+
+/*настройка стилей пунктов меню и подменю*/
+
+.main-nav a {
+    min-width: 85px;
+    padding: 10px 15px;
+    display: block;
+
+    color: #1d3130; /*цвет шрифта пунктов меню по умолчанию */
+    text-align: center;
+}
+
+.main-nav-top {
+    margin: 0;
+    padding: 0;
+}
+
+.home,
+.main-nav-top > li {
+    float: left;
+
+}
+
+.main-nav-top > li {
+    position: relative;
+}
+
+.main-nav-sub {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 101;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.main-nav-sub li {
+    margin-bottom: -1px;
+    border-top: 1px solid #2f3036;
+}
+
+.main-nav-sub a {
+
+    background: #fdfdfd;
+    background: rgba(253, 253, 253, .9);
+}
+
+.main-nav-sub li:last-child a {
+    border-radius: 0 0 5px 5px;
+}
+
+/*кнопка-логотип // в мобильном режиме работает как меню*/
+.home a {
+    padding: 0 15px;
+
+    background: red;
+    border-radius: 0 0 0 5px;
+}
+
+/*сам логотип*/
+.home img {
+    margin: 5px 0 6px;
+}
+
+/*стилизация спец символа меню*/
+.home span {
+    visibility: hidden;
+    margin-left: 5px;
+
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #fdfdfd;
+    vertical-align: 5px;
+}
+
+/*настройка стилей выпадающего подменю при наведении*/
+.home a:hover,
+.main-nav-top a:hover,
+.addInfo:hover {
+    background: #3d77d5;
+    color: #fdfdfd;
+}
+
+.home a:hover {
+    border-radius: 0 0 0 5px;
+}
+
+.main-nav-top li:hover .main-nav-sub {
+    display: block;
+}
+
+/* -------------НАСТРОЙКА USER-BLOCK ---------------------------------------------------------------------------------*/
+/*настройка стилей БЛОКА РЕГИСТРАЦИИ*/
+
+.user-block {
+    float: right;
+    width: 15%;
+    margin: 0;
+    position: relative;
+
+    background: #fdfdfd;
+    background: rgba(253, 253, 253, .9);
+    border-radius: 0 0 5px 0;
+}
+
+.user-block .login {
+    display: block;
+    padding: 10px 10px 10px 25px;
+    border-left: 1px solid #e1e1e1;
+
+    text-align: center;
+    color: #1d3130; /*цвет шрифта блока регистрации по умолчанию */
+}
+
+.user-block .login:hover {
+    background: #3d77d5;
+    color: #fdfdfd;
+    border-radius: 0 0 5px 0;
+}
+
+.user-block .login:before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    margin-top: 3px;
+    background: url('../images/sprites.png') no-repeat -78px -160px;
+    width: 18px;
+    height: 16px;
+    opacity: .3;
+}
+
+.user-block .login:hover:before {
+    opacity: .6;
+}
+
+/*настройка ОКНА РЕГИСТРАЦИИ */
+.login-window {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 37.5%;
+    z-index: 100;
+
+    width: 25%;
+    max-width: 300px;
+    padding: 15px 40px;
+
+    background: #fdfdfd;
+    background: rgba(253, 253, 253, .9);
+    border: 1px solid #3d77d5;
+    border-radius: 5px;
+}
+
+.login-window-show {
+    display: block;
+    animation: moveDown 1s;
+}
+
+.login-window-close {
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    z-index: 100;
+
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    color: #ccc;
+    text-align: center;
+
+    background: #fdfdfd;
+    background: rgba(253, 253, 253, .5);
+    border-radius: 5px;
+}
+
+.login-window-close:hover {
+    color: #1d3130;
+    background: #3d77d5;
+    cursor: pointer;
+}
+
+.login-window-title {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-window p {
+    margin-bottom: 15px;
+}
+
+.login-form {
+    width: 100%;
+    margin: 0 auto;
+
+    font-family: inherit;
+}
+
+.login-window .user,
+.login-window .password {
+    display: block;
+    width: 85%;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+
+    font-size: .7em;
+    text-transform: uppercase
+}
+
+.login-window .remember-name {
+    float: left;
+}
+
+.login-window .remind {
+    float: right;
+    border-bottom: 1px dashed #1d3130;
+
+    color: #1d3130;
+}
+
+.login-window .btn {
+    clear: both;
+    float: right;
+    margin-top: 15px;
+    padding: 5px 15px;
+
+    color: #1d3130;
+    font-weight: bold;
+    font-size: .7em;
+    text-transform: uppercase;
+}
+
+.login-window .btn:hover {
+    background: #3d77d5;
+    color: #fdfdfd;
+    border: 2px solid #3d77d5;
+    border-radius: 3px;
+}
+
+/*Анимация ОКНА Регистрации*/
+/*выезд окна*/
+@keyframes moveDown {
+    0% {
+        transform: translateY(-1000px);
+    }
+    70% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/*настройка  окна регистрации для показа на отдельной странице*/
+.login-page {
+    margin: 100px auto 60px;
+    padding: 15px 40px;
+    width: 25%;
+
+    background: #fdfdfd;
+    background: rgba(253, 253, 253, .9);
+    border: 1px solid #3d77d5;
+    border-radius: 5px;
+}
+
+.login-page-close {
+    display: none;
+}
+
+.login-page-title {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-page p {
+    margin-bottom: 15px;
+}
+
+.login-page .user,
+.login-page .password {
+    display: block;
+    width: 85%;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+
+    font-size: .7em;
+    text-transform: uppercase
+}
+
+.login-page .remember-name {
+    float: left;
+}
+
+.login-page .remind {
+    float: right;
+
+    color: #1d3130;
+    border-bottom: 1px dashed #1d3130;
+}
+
+.login-page .btn {
+    clear: both;
+    float: right;
+    margin-top: 15px;
+    padding: 5px 15px;
+
+    color: #1d3130;
+    font-weight: bold;
+    font-size: .7em;
+    text-transform: uppercase;
+}
+
+.login-page .btn:hover {
+    background: #3d77d5;
+    color: #fdfdfd;
+    border: 2px solid #3d77d5;
+    border-radius: 3px;
+}
+
+/*--------НАСТРОЙКА ХЛЕБНЫХ КРОШЕК------------------------------------------------------------------------------------*/
+
+.breadcrumbs {
+    clear: both;
+    padding: 10px 15px;
+}
+
+.breadcrumbs li {
+    float: left;
+    margin-right: 10px;
+}
+
+.breadcrumbs a {
+    float: left;
+
+    /*text-decoration: none;*/
+    font-size: .75em;
+    color: #fdfdfd;
+}
+
+.breadcrumbs span {
+    width: .75em;
+    height: .75em;
+
+    float: left;
+    margin-left: 5px;
+    margin-top: .1em;
+    border-top: 1px solid;
+    border-right: 1px solid;
+
+    color: #fdfdfd;
+    transform: rotate(45deg);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:hover + span {
+    color: #1d3130;
+}
+
+.breadcrumbs .current a {
+    color: #1d3130;
+    font-weight: bold;
+}
+
+.breadcrumbs .current span {
+    display: none;
+}
+
+/*--------------------------------АДАПТИВНОСТЬ-HEADER-----------------------------------------------------------------*/
+/*------------------------------------*/
+/*----------- 60 em -------------------*/
+/*------------------------------------*/
+@media screen and (max-width: 960px) {
+    .main-header {
+        width: 90%;
+    }
+
+    .main-nav a {
+        padding: 10px 10px;
+    }
+
+    .home a {
+        padding: 0 15px;
+    }
+
+    /*настройка блока регистрации*/
+    .user-block .login {
+        padding: 10px 10px 10px 25px;
+    }
+
+    .login-window,
+    .login-page {
+        left: 35%;
+        width: 30%;
+        max-width: 300px;
+    }
+}
+
+/*------------------------------------*/
+/*------------планшеты-----------------*/
+/*----------- 768 px-------------------*/
+/*------------------------------------*/
+@media screen and (max-width: 768px) {
+
+    .main-header {
+        width: 95%;
+    }
+
+    /*настройка пунктов меню и подменю*/
+    /*отображение спец символа меню*/
+    .home span {
+        visibility: visible;
+    }
+
+    .main-nav-top,
+    .main-nav-sub {
+        width: 100%;
+        display: none;
+        /*margin: 0; !*специально для ie <= 7*!*/
+        /*padding: 0; !*специально для ie <= 7*!*/
+    }
+
+    .home {
+        width: 100%;
+    }
+
+    .main-nav li {
+        width: 100%;
+        border-top: 1px solid #2f3036;
+        background: #fdfdfd;
+        background: rgba(253, 253, 253, .9);
+    }
+
+    /*раскрытие/отображение 1 уровня*/
+    .home:hover + .main-nav-top,
+    .main-nav-top:hover {
+        display: block;
+        position: absolute;
+        top: 100%;
+        z-index: 100;
+    }
+
+    /*раскрытие/отображение 2 уровня*/
+    .addInfo:hover + .main-nav-sub,
+    .main-nav-sub:hover {
+        display: block;
+        position: absolute;
+        top: 100%;
+        z-index: 100;
+    }
+
+    .addInfo:hover .main-nav-sub li:last-child {
+        border-radius: 0 0 5px 5px;
+    }
+
+    /*настройка элементов блока регистрации*/
+    .user-block .login {
+        padding-left: 10px;
+    }
+
+    .user-block .login:before {
+        display: none;
+    }
+
+    .login-window,
+    .login-page {
+        left: 25%;
+        width: 45%;
+        max-width: 250px;
+        padding: 15px 25px;
+    }
+}
+
+/*------------------------------------*/
+/*------------ смарты-------------------*/
+/*----------- <=480 px------------------*/
+/*------------------------------------*/
+@media screen and (max-width: 480px) {
+
+    .main-header {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .main-nav-top {
+        width: 117.65%; /* (100%/85%*100% - точный рассчет  ширины меню) */
+    }
+
+    /*настройка  стилей блока регистрации */
+    .user-block .login span {
+        visibility: hidden;
+    }
+
+    .user-block .login:before {
+        display: block;
+        left: 50%;
+        margin-left: -9px;
+    }
+
+    .login-window,
+    .login-page {
+        left: 10%;
+        width: 65%;
+        min-width: 175px;
+        padding: 15px 15px;
+    }
+
+    .breadcrumbs {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 336px) {
+
+    .login-window .remember-name,
+    .login-page .remember-name {
+        width: 100%;
+    }
+
+    .login-window .remind,
+    .login-page .remind {
+        float: left;
+        margin-top: 10px;
+    }
+
+    .login-window .btn,
+    .login-page .btn {
+        width: 100%;
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------FOOTER---------------------------------------------------------------*/
+/*-----------------------------------------------FOOTER---------------------------------------------------------------*/
+/*-----------------------------------------------FOOTER---------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+.main-footer {
+    width: 80%;
+    margin-bottom: 1em;
+    padding: 15px 0 10px;
+
+    text-align: center;
+    background: #fdfdfd;
+    background: rgba(253, 253, 253, .9);
+    border-radius: 5px 5px 0 0;
+}
+
+.main-footer .footer-title {
+    margin: 0 0 10px 0;
+
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.footer-social {
+    font-size: 0;
+    float: left;
+    width: 24%;
+    margin-left: 2%;
+}
+
+.footer-copyright {
+    font-size: 0;
+    float: left;
+    width: 44%;
+    margin-left: 2%;
+}
+
+.we-are p,
+.we-are a {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.we-are a:hover {
+    border-bottom: 1px dashed;
+}
+
+.footer-contacts {
+    font-size: 0;
+    float: right;
+    width: 24%;
+    margin-right: 2%;
+}
+
+.social-btn {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 2px;
+
+    text-align: justify;
+    background: #000 url('../images/sprites.png') no-repeat center;
+}
+
+.social-btn a {
+    display: block;
+    height: 30px;
+}
+
+.social-btn:hover {
+    box-shadow: 2px 2px 2px #656565;
+}
+
+.social-btn-fb {
+    background-position: -4px -94px;
+}
+
+.social-btn-vk {
+    background-position: -164px -90px;
+}
+
+.social-btn-yt {
+    background-position: -4px -134px;
+}
+
+.social-btn-skype {
+    background-position: -168px -50px;
+}
+
+.social-btn-mail {
+    background-position: -44px -94px;
+}
+
+.social-btn-phone {
+    background-position: -124px -54px;
+}
+
+/*--------------------------------АДАПТИВНОСТЬ-FOOTER-----------------------------------------------------------------*/
+@media screen and (max-width: 960px) {
+    .main-footer {
+        width: 90%;
+    }
+}
+/*------------------------------------*/
+/*------------планшеты-----------------*/
+/*----------- 48 em -------------------*/
+/*------------------------------------*/
+@media screen and (max-width: 768px) {
+    .main-footer {
+        width: 95%;
+    }
+}
+/*------------------------------------*/
+/*------------ смарты-------------------*/
+/*----------- <=30 em -------------------*/
+/*------------------------------------*/
+@media screen and (max-width: 480px) {
+    .main-footer {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 432px) {
+    .main-footer {
+        margin-bottom: 0;
+    }
+
+    .footer-social {
+        float: left;
+        width: 48%;
+    }
+
+    .footer-copyright {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .footer-copyright .footer-title {
+        margin-bottom: 0;
+    }
+
+    .footer-contacts {
+        float: right;
+        width: 48%;
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------MAIN-----------------------------------------------------------------*/
+/*-----------------------------------------------MAIN-----------------------------------------------------------------*/
+/*-----------------------------------------------MAIN-----------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.main-info {
+    width: 80%;
+    margin-bottom: 3em;
+    padding: 0.5em 0 1em;
+
+    background: #fdfdfd;
+    background: rgba(253, 253, 253, .8);
+    border-radius: 5px;
+}
+
+.expeditions,
+.info {
+    width: 95%;
+    margin: 1em auto;
+}
+
+.expeditions-announces,
+.expeditions-reports,
+.info-article {
+    width: 49%;
+}
+
+.info-article {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.info-article:nth-of-type(odd) {
+    margin-right: 2%;
+}
+
+.info-article:nth-of-type(even) {
+    margin-left: -6px;
+}
+
+.expeditions h2 {
+    text-align: right;
+}
+
+.slider-header h3,
+.reports-header h3,
+.info-header h3 {
+    margin: 0 0 5px 0;
+
+    text-align: right;
+    font-weight: normal;
+}
+
+.slider-header time,
+.reports-header time,
+.info-header time {
+    margin: 0;
+
+    text-align: right;
+    font-size: .75em;
+}
+
+/*настройка отображения картинок*/
+.main-info img,
+.main-info video {
+    width: 100%;
+    border: 2px solid #e1e1e1;
+
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #000, -3px -3px -3px #000;
+}
+
+.slider-wrapper p,
+.reports-article p,
+.info-article p {
+    margin: .3em 0;
+    font-size: .85em;
+}
+
+.info h2 {
+    text-align: center;
+}
+
+/*настройка readmore*/
+.reports-article span,
+.info span {
+    margin: 10px 0;
+    display: block;
+}
+
+/*---------------------------------------------Настройка слайдера-----------------------------------------------------*/
+/*
+ * jQuery Nivo Slider v3.2
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2012, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+/*-----------------------------------------------------*/
+/*!*import of default theme!!! *!*/
+/*@import url("../scripts/slider/themes/default/default.css");*/
+
+/* The Nivo Slider styles */
+/*.slider-wrapper {*/
+    /*!*width: 100%;*!*/
+    /*!*margin: 0 auto;*!*/
+
+    /*border-radius: 5px;*/
+/*}*/
+
+.nivoSlider {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+
+    border-radius: 5px;
+}
+
+.nivoSlider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: none;
+}
+
+.nivo-main-image {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 6;
+    display: none;
+    background: white;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+/* The slices and boxes in the Slider */
+.nivo-slice {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    top: 0;
+}
+
+.nivo-box {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.nivo-box img {
+    display: block;
+}
+
+/* Caption styles */
+.nivo-caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #000;
+    color: #fff;
+    font-size: 0.75em;
+    width: 100%;
+    z-index: 8;
+    padding: 5px 10px;
+    opacity: .8;
+    overflow: hidden;
+    display: none;
+    -moz-opacity: .8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=50)";
+/ / фильтр для IE8 filter: alpha(opacity = 80);
+/ / фильтр для IE6-7 -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+.nivo-caption p {
+    padding: 5px;
+    margin: 0;
+}
+
+.nivo-caption a {
+    display: inline !important;
+}
+
+.nivo-html-caption {
+    display: none;
+}
+
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+    position: absolute;
+    top: 45%;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.nivo-prevNav {
+    left: 0;
+}
+
+.nivo-nextNav {
+    right: 0;
+}
+
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.nivo-controlNav a {
+    cursor: pointer;
+}
+
+.nivo-controlNav a.active {
+    font-weight: bold;
+}
+
+#slider {
+    position: relative;
+    z-index: 0;
+}
+
+/*--------------------------------АДАПТИВНОСТЬ-MAIN-------------------------------------------------------------------*/
+/*------------------------------------*/
+/*------------планшеты-----------------*/
+/*----------- 60 em -------------------*/
+/*------------------------------------*/
+@media screen and (max-width: 960px) {
+    .main-info {
+        width: 90%;
+    }
+}
+/*------------------------------------*/
+/*------------планшеты-----------------*/
+/*----------- =<48 em -----------------*/
+/*------------------------------------*/
+@media screen and (max-width: 768px) {
+    .main-info {
+        width: 95%;
+    }
+
+    .expeditions-announces,
+    .expeditions-reports {
+        width: 100%;
+    }
+
+    .info .left {
+        float: right;
+    }
+}
+
+@media screen and (max-width: 592px) {
+    .info-article {
+        width: 100%;
+    }
+
+    /*настройка поведения блоков кнопок readmore - решение проблемы перекрытия*/
+    .info .left {
+        float: left;
+    }
+}
+
+/*------------------------------------*/
+/*------------ смарты-------------------*/
+/*----------- <=30 em -------------------*/
+/*------------------------------------*/
+@media screen and (max-width: 480px) {
+     .main-info {
+         width: 100%;
+        margin-bottom: .5em;
+    }
+
+    .expeditions-announces,
+    .expeditions-reports,
+    .info-article {
+        width: 100%;
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------ASIDE-----------------------------------------------------------------*/
+/*-----------------------------------------------ASIDE-----------------------------------------------------------------*/
+/*-----------------------------------------------ASIDE-----------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------настройка выдвижной панели-------------------------------------------------------*/
+.main-aside { /* блок-вкладыш  урезан до предела */
+    width: 65px;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    z-index: 99;
+
+    text-align: center;
+    background: red;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    border-radius: 5px 0 0 5px;
+
+}
+
+.btn-news {
+    padding: 10px 0;
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.main-aside-news { /*блок - секция  с новостями */
+    position: fixed;
+    top: 60px;
+    right: -303px;
+    background: white;
+    width: 270px;
+    padding: 15px;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    text-align: right;
+    border: 3px solid red;
+    border-radius: 0 0 0 5px;
+}
+
+/*выезд панели при наведении на NEWS!*/
+.main-aside-show {
+    right: 303px;
+}
+
+.main-aside-news-show {
+    right: 0;
+}
+
+/*альтернативный вариант выехда - через hover*/
+/*.main-aside:hover {*/
+/*right: 303px;*/
+/*}*/
+/*.main-aside:hover .main-aside-news {*/
+/*right: 0;*/
+/*}*/
+
+/*-----------------------------------настройка контента панели новостей ----------------------------------------------*/
+.main-aside-news article {
+    margin: 10px auto;
+}
+
+.main-aside-news img {
+    float: left;
+    width: 75px;
+    margin-top: 4px;
+    margin-right: 4px;
+    border: 2px solid #e1e1e1;
+    border-radius: 3px;
+}
+
+.main-aside-title {
+    color: #a14141;
+    border-bottom: 2px solid #ecebe1;
+}
+
+.main-aside-news h3 {
+    margin: 0;
+}
+
+.aside-news-header h5 {
+    margin: 0 0 5px 0;
+    text-align: right;
+}
+
+.aside-news-header time {
+    margin: 0;
+    text-align: right;
+    font-size: .6em;
+}
+
+.main-aside-news p {
+    font-size: .7em;
+    margin: .3em 0;
+    text-align: left;
+}
+
+.main-aside-news span {
+    margin-top: 5px;
+}
+
+/*--------------------------------АДАПТИВНОСТЬ-ASIDE------------------------------------------------------------------*/
+/*------------------------------------*/
+/*------------ смарты-------------------*/
+/*----------- <=30 em -------------------*/
+/*------------------------------------*/
+@media screen and (max-width: 480px) {
+
+    .main-aside { /* блок-вкладыш  урезан до предела */
+        /*width: 3em;*/
+        display: none;
+    }
+
+    /*.btn-news {*/
+        /*padding: 5px 0;*/
+        /*font-size: .8em;*/
+        /*margin: 0;*/
+    /*}*/
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------REPORTS--------------------------------------------------------------*/
+/*-----------------------------------------------REPORTS--------------------------------------------------------------*/
+/*-----------------------------------------------REPORTS--------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+.tourism-reports {
+    width: 95%;
+    margin: 1em auto;
+}
+
+.tourism-reports h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.tourism-reports-article {
+    margin-top: 1em;
+}
+
+.tourism-reports-header {
+    border-bottom: 2px solid #ecebe1;
+    margin-bottom: 0.5em;
+}
+
+.tourism-reports-header h3 {
+    margin: 0 0 5px 0;
+
+    text-align: right;
+    font-weight: normal;
+}
+
+.tourism-reports-header time {
+    margin: 0;
+
+    text-align: right;
+    font-size: .85em;
+}
+
+/*настройка отображения картинок*/
+.tourism-reports-article img {
+    width: 30%;
+    float: left;
+    margin: 0 .5em 0.5em 0;
+}
+
+.tourism-reports-article p {
+    margin: .3em 0;
+    font-size: .9em;
+}
+
+.tourism-reports-article span {
+    margin-top: .45em;
+}
+
+/*--------------------------------АДАПТИВНОСТЬ-REPORTS------------------------------------------------------------------*/
+/*------------------------------------*/
+/*------------планшеты-----------------*/
+/*----------- =<48 em -----------------*/
+/*------------------------------------*/
+@media screen and (max-width: 768px) {
+    .tourism-reports-article img {
+        width: 50%;
+    }
+}
+
+/*------------------------------------*/
+/*------------ смарты-------------------*/
+/*----------- <=30 em -------------------*/
+/*------------------------------------*/
+@media screen and (max-width: 480px) {
+    .tourism-reports-article img {
+        width: 100%;
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------SPECIFIC REPORT------------------------------------------------------*/
+/*-----------------------------------------------SPECIFIC REPORT------------------------------------------------------*/
+/*-----------------------------------------------SPECIFIC REPORT------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*общий блок -----------------------------------------------------*/
+.tourism-report {
+    width: 95%;
+    margin: 1em auto;
+}
+
+.tourism-report h1 {
+    text-align: center;
+}
+
+/* блок описания ------------------------------------------------------------------------------------------------------*/
+.tourism-report-description {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.tourism-report-header {
+    border-bottom: 2px solid #ecebe1;
+    margin-bottom: 0.5em;
+}
+
+.tourism-report-header h3 {
+    margin: 0 0 5px 0;
+
+    text-align: right;
+    font-weight: normal;
+}
+
+.tourism-report-header time {
+    margin: 0;
+
+    text-align: right;
+    font-size: .85em;
+}
+
+/*настройка отображения картинок*/
+.tourism-report-description img {
+    width: 30%;
+    float: left;
+    margin: 0 .5em 0.5em 0;
+}
+
+.tourism-report-description p {
+    margin: .3em 0;
+    font-size: .9em;
+}
+
+/* блок карты----------------------------------------------------------------------------------------------------------*/
+/*Настройка просмотра карты маршрута*/
+.tourism-report-map {
+    margin-bottom: 1em;
+}
+
+.report-map {
+    display: none;
+    margin: 0 auto;
+    padding: 2em;
+    width: 50%;
+    background-color: #5e9af5;
+    border-radius: 5px;
+}
+
+.map-img {
+    width: 100%;
+}
+
+.btn-map a {
+    display: block;
+    float: right;
+    padding: 10px;
+    background-color: red;
+    color: #fdfdfd;
+    border-radius: 0 0 5px 5px;
+}
+
+/* блок отзывов-------------------------------------------------------------------------------------------------------*/
+.tourism-report-revews {
+    margin-bottom: 1em;
+
+    background: #5e9af5;
+    background: rgba(94, 154, 245, .7);
+    border-radius: 5px;
+}
+
+.tourism-report-revews h3 {
+    margin:0 0 0 1em;
+    padding:1em 0;
+}
+
+/*задаем стили 2-х внутренних контейнеров с комментариями*/
+.tourism-report-revews article {
+    width: 47%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    margin-left: 2%;
+    margin-bottom: 16px;
+}
+
+/*задаем стили для картинок участников*/
+.tourism-report-revews article img {
+    width: 20%;
+    float: left;
+}
+
+/*задаем стили для блоков с текстовой информацией внутри комметнариев*/
+.report-revews-content {
+    width: 75%;
+    margin-left: 25%;
+    position: relative;
+
+    background-color: #fdfdfd;
+    border-radius: 5px;
+}
+
+/*стили подблока с именем участника и его кличкой*/
+.report-revews-header {
+    border-bottom: 1px dotted #666666;
+    overflow: hidden;
+}
+
+.report-revews-header > span {
+    font-style: italic;
+    font-size: 14px;
+    color: #3070a8;
+    margin: 5px 10px;
+}
+
+/*разводим по разным концам блока имя и звание*/
+.report-revews-header span:nth-of-type(1) {
+    float: left;
+}
+
+.report-revews-header span:nth-of-type(2) {
+    float: right;
+}
+
+.report-revews-text {
+    margin: 0 7px;
+    padding: 2px 0;
+    font-size: 12px;
+}
+
+/*настройка тескта внутри блока*/
+.report-revews-text p {
+    color: #666666;
+}
+
+.report-revews-content:before {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: -29px;
+    top: 28px;
+    border: 15px solid transparent;
+    border-right: 15px #fdfdfd solid;
+}
+
+/* блок фотоотчета----------------------------------------------------------------------------------------------------*/
+.tourism-report-gallery {
+    background: #5e9af5;
+    background: rgba(94, 154, 245, .7);
+    border-radius: 5px;
+}
+
+.tourism-report-gallery h3 {
+    margin:0 0 0 1em;
+    padding-top:1em;
+}
+
+.report-gallery-list{
+    font-size: 0;
+}
+
+.report-gallery-item {
+    width: 21%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 2%;
+    padding: 0;
+}
+.report-gallery-item figure{
+    padding:0;
+    margin:0;
+    position: relative;
+}
+
+.report-gallery-item img {
+    display: block;
+    width: 100%;
+    border: 1px solid #fff;
+
+    transition-duration: .5s;
+    -webkit-transition-duration: .5s; /*Webkit: длительность анимации*/
+    -moz-transition-duration: .5s; /*Mozilla: длительность анимации*/
+    -o-transition-duration: .5s; /*Opera: длительность анимации*/
+}
+
+.report-gallery-item:hover img {
+    transform:scale(3);
+    position: relative;
+    z-index:100;
+}
+
+.report-gallery-item:nth-of-type(4n+1):hover img {
+    left: 15%;
+}
+
+.report-gallery-item:nth-of-type(4n):hover img {
+     left:-15%;
+}
+
+.report-gallery-item figcaption {
+    display: none;
+    padding: 5px 10px;
+
+    text-align: right;
+    font-size: 16px;
+    color: #fdfdfd;
+    background: #000;
+    background: rgba(0, 0, 0, .5);
+}
+
+.report-gallery-item:hover figcaption {
+    display: block;
+    width:100%;
+    position: absolute;
+    left: 65%;
+    bottom:-65%;
+    z-index:103;
+}
+
+/* отдельная страница с картой маршрута (если не сработает скрипт)----------------------------------------------------*/
+.tourism-report-map{
+    width: 95%;
+    margin: 1em auto;
+}
+
+.main-info h1{
+    text-align: center;
+}
+
+.map-header {
+    border-bottom: 2px solid #ecebe1;
+    margin-bottom: 0.5em;
+}
+
+.map-header h3 {
+    margin: 0 0 5px 0;
+
+    text-align: right;
+    font-weight: normal;
+}
+
+.map-header time {
+    margin: 0;
+
+    text-align: right;
+    font-size: .85em;
+}
+
+.tourism-report-map p {
+    margin: .3em 0;
+    font-size: .9em;
+}
+
+/*настройка отображения карты*/
+.tourism-report-map .map-img {
+    display: block;
+    width: 96%;
+    margin: 1em auto;
+    padding: 2%;
+
+    background-color: #5e9af5;
+    border-radius: 5px;
+}
+
+/*--------------------------------АДАПТИВНОСТЬ-SPECIFIC REPORT--------------------------------------------------------*/
+/*-----------------------------------------------*/
+/*-----------------десктопы----------------------*/
+/*------------------<= 60em ---------------------*/
+/*----------------------------------------------*/
+@media screen and (max-width: 960px) {
+    /*настройка фотогаллереи - масштабирование-----------------------------*/
+    .report-gallery-item {
+        width: 29.333%;
+    }
+
+    .report-gallery-item:hover img {
+        transform:scale(1.7);
+    }
+    .report-gallery-item figcaption {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .report-gallery-item:nth-of-type(4n+1):hover img {
+        left: 0;
+    }
+
+    .report-gallery-item:nth-of-type(4n):hover img {
+        left:0;
+    }
+    .report-gallery-item:hover figcaption {
+        left: 25%;
+        bottom:-25%;
+    }
+}
+
+/*------------------------------------*/
+/*------------планшеты-----------------*/
+/*----------- =<48 em -----------------*/
+/*------------------------------------*/
+@media screen and (max-width: 768px) {
+    /*блок описания -----------------------------------------*/
+    .tourism-report-description img {
+        width: 45%;
+    }
+
+    /*блок карта --------------------------------------------*/
+    .report-map {
+        width: 80%;
+        padding:0;
+        margin: 0 auto;
+        background: none;
+    }
+    /*блок отзывов*/
+    .tourism-report-revews article {
+        width: 96%;
+    }
+    /*настройки фотогалереи ----------------------------------*/
+    .report-gallery-item {
+        width: 46%;
+    }
+
+    .report-gallery-item:hover img {
+        transform:scale(1.3);
+        left: 0;
+    }
+    .report-gallery-item:hover figcaption {
+        left: 10%;
+        bottom:-10%;
+    }
+}
+/*------------------------------------*/
+/*------------ смарты-------------------*/
+/*----------- <=30 em -------------------*/
+/*------------------------------------*/
+@media screen and (max-width: 480px) {
+    .tourism-report h2 {
+        font-size: 1.1em;
+    }
+   /*блок описания ------------------------------------------*/
+    .tourism-report-description h3 {
+        font-size: .9em;
+    }
+    .tourism-report-description time {
+        font-size: .6em;
+    }
+    .tourism-report-description img {
+        width: 100%;
+        margin:0 0 .5em 0;
+    }
+    .tourism-report-description p {
+        font-size: .8em;
+    }
+    /*блок карта-------------------------------------------*/
+    .report-map {
+        width: 95%;
+    }
+
+    /*блок отзывов*/
+    .report-revews-content:before {
+        display: none;
+    }
+
+    .tourism-report-revews article img {
+        width: 23%;
+    }
+
+    /*настройки фотогалереи---------------------------------*/
+    .report-gallery-item {
+        width: 96%;
+    }
+
+    .report-gallery-item:hover img {
+        transform:scale(1);
+        right: 0;
+    }
+    .report-gallery-item:hover figcaption {
+        width: 80%;
+        left: 15%;
+        bottom: 5%;
+    }
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------ARTICLES-------------------------------------------------------------*/
+/*-----------------------------------------------ARTICLES-------------------------------------------------------------*/
+/*-----------------------------------------------ARTICLES-------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+.tourism-info {
+    width: 95%;
+    margin: 1em auto;
+}
+
+.tourism-info h1 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.tourism-info-article {
+    margin-top: 1em;
+}
+
+.tourism-info-header {
+    border-bottom: 2px solid #ecebe1;
+    margin-bottom: 0.5em;
+}
+
+.tourism-info-header h3 {
+    margin: 0 0 5px 0;
+
+    text-align: right;
+    font-weight: normal;
+}
+
+.tourism-info-header time {
+    margin: 0;
+
+    text-align: right;
+    font-size: .85em;
+}
+
+/*настройка отображения картинок*/
+.tourism-info-article img,
+.tourism-info-article video,
+.tourism-info-article iframe{
+    width: 30%;
+    float: left;
+    margin: 0 .5em 0.5em 0;
+    border: 1px solid #fff;
+}
+
+.tourism-info-article p {
+    margin: .3em 0;
+    font-size: .9em;
+}
+
+.tourism-info-article span {
+    margin-top: .6em;
+}
+
+.tourism-info-article ol{
+    list-style: upper-roman inside;
+    margin-left: 1em;
+    overflow: hidden;
+}
+
+.tourism-info-article ul{
+    list-style: disc inside;
+    margin-left: .5em;
+    padding-left: 0.5em;
+}
+
+
+/*--------------------------------АДАПТИВНОСТЬ-ARTICLES---------------------------------------------------------------*/
+/*------------------------------------*/
+/*------------планшеты-----------------*/
+/*----------- =<48 em -----------------*/
+/*------------------------------------*/
+@media screen and (max-width: 768px) {
+    .tourism-info-article img,
+    .tourism-info-article video,
+    .tourism-info-article iframe {
+        width: 50%;
+    }
+}
+
+/*------------------------------------*/
+/*------------ смарты-------------------*/
+/*----------- <=30 em -------------------*/
+/*------------------------------------*/
+@media screen and (max-width: 480px) {
+    .tourism-info-article img,
+    .tourism-info-article video,
+    .tourism-info-article iframe{
+        width: 100%;
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------SPECIFIC-ARTICLE-----------------------------------------------------*/
+/*-----------------------------------------------SPECIFIC-ARTICLE-----------------------------------------------------*/
+/*-----------------------------------------------SPECIFIC-ARTICLE-----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*общий блок -----------------------------------------------------*/
+.tourism-article {
+    width: 95%;
+    margin: 1em auto;
+}
+
+.tourism-article h1 {
+    text-align: center;
+}
+
+
+/* блок описания ------------------------------------------------------------------------------------------------------*/
+.tourism-article-description {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.tourism-article-header {
+    border-bottom: 2px solid #ecebe1;
+    margin-bottom: 0.5em;
+}
+
+.tourism-article-header h3 {
+    margin: 0 0 5px 0;
+
+    text-align: right;
+    font-weight: normal;
+}
+
+.tourism-article-header time {
+    margin: 0;
+
+    text-align: right;
+    font-size: .85em;
+}
+
+/*настройка отображения картинок/видео/iframe */
+.tourism-article-description iframe,
+.tourism-article-description video,
+.tourism-article-description img{
+    width: 50%;
+    float: left;
+    margin: 0 .5em 0.5em 0;
+}
+
+.tourism-article-description h3 {
+    margin-bottom: 0;
+}
+.tourism-article-description p {
+    margin: .3em 0;
+    font-size: .9em;
+    text-align: justify;
+}
+.tourism-article-description .medicine-handbook{
+    border-bottom: 1px dashed #1d3130;
+}
+
+.tourism-article-description a[href$=".zip"]{
+    padding-left: 20px;
+    background: url('../images/sprites.png') no-repeat -93px -186px;
+    width: 13px;
+    height: 16px;
+}
+.tourism-article-description a:hover{
+    border-bottom: 1px dashed #3070a8;
+    color: #3070a8;
+}
+
+/*настройка таблиц ---------------------------------------------------------------------------------------------------*/
+.table-medicine{
+    width: 100%;
+    margin: .3em 0 1em 0;
+
+}
+
+.table-medicine tr,
+.table-medicine td {
+    font-size: 1em;
+    border: 1px solid #3070a8;
+    padding: 3px 7px 2px 7px;
+}
+.table-medicine th{
+    text-transform: uppercase;
+    text-align: left;
+    padding: 5px 7px 3px;
+    background: rgb(229,76,16);
+    background: linear-gradient(to bottom, rgb(255, 0, 0), rgb(173,54,8));
+    color: white;
+}
+.table-medicine tr:nth-of-type(even){
+    background-color: rgba(255,255,255,.1);
+}
+.table-medicine tr:nth-of-type(odd){
+    background-color: rgba(229,76,16,.1);
+}
+
+.table-quality{
+    width: 20%;
+}
+.table-rating{
+    width: 12%;
+}
+
+.rating1:after{
+    content:"\272a";
+    color:  rgb(229,76,16);
+    font-size:inherit;
+}
+.rating2:after{
+    content:"\272a \272a";
+    color:  rgb(229,76,16);
+    font-size:inherit;
+}
+.rating3:after{
+    content:"\272a \272a \272a";
+    color:  rgb(229,76,16);
+    font-size:inherit;
+}
+.rating4:after{
+    content:"\272a \272a \272a \272a";
+    color:  rgb(229,76,16);
+    font-size:inherit;
+}
+.rating5:after{
+    content:"\272a \272a \272a \272a \272a";
+    color:  rgb(229,76,16);
+    font-size:inherit;
+}
+
+.table-medicine tr:hover{
+
+    background: #3d77d5;
+    background: linear-gradient(to bottom, #3d77d5, #1B5FCA);
+    color: #fdfdfd;
+}
+
+
+
+
+/*--------------------------------АДАПТИВНОСТЬ-SPECIFIC-ARTICLE-------------------------------------------------------*/
+/*------------------------------------*/
+/*------------планшеты-----------------*/
+/*----------- =<48 em -----------------*/
+/*------------------------------------*/
+@media screen and (max-width: 768px) {
+    .tourism-article-description img,
+    .tourism-article-description video,
+    .tourism-article-description iframe {
+        width: 60%;
+    }
+    .tourism-article h1 {
+        font-size: 1.5em;
+    }
+    .tourism-article-description h3 {
+        font-size: 1em;
+    }
+    .table-medicine tr,
+    .table-medicine td,
+    .table-medicine th{
+        font-size: .9em;
+    }
+
+}
+
+/*------------------------------------*/
+/*------------ смарты-------------------*/
+/*----------- <=30 em -------------------*/
+/*------------------------------------*/
+@media screen and (max-width: 480px) {
+    .tourism-article-description img,
+    .tourism-article-description video,
+    .tourism-article-description iframe {
+        width: 100%;
+    }
+
+    .tourism-article h1 {
+        font-size: 1.1em;
+    }
+
+    .tourism-article-description h3 {
+        font-size: .9em;
+    }
+
+    .table-medicine tr,
+    .table-medicine td{
+        font-size: .8em;
+    }
+    .table-medicine th{
+        font-size: .7em;
+    }
+    .tourism-article-description .medicine-handbook{
+        font-size: .9em;
+    }
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------NEWS-----------------------------------------------------------------*/
+/*-----------------------------------------------NEWS-----------------------------------------------------------------*/
+/*-----------------------------------------------NEWS-----------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+.tourism-news {
+    width: 95%;
+    margin: 1em auto;
+}
+
+.tourism-news h1 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.tourism-news-article {
+    margin-top: 1em;
+}
+
+.tourism-news-header {
+    border-bottom: 2px solid #ecebe1;
+    margin-bottom: 0.5em;
+}
+
+.tourism-news-header h3 {
+    margin: 0 0 5px 0;
+
+    text-align: right;
+    font-weight: normal;
+}
+
+.tourism-news-header time {
+    margin: 0;
+
+    text-align: right;
+    font-size: .85em;
+}
+
+/*настройка отображения картинок*/
+.tourism-news-article img {
+    width: 30%;
+    float: left;
+    margin: 0 .5em 0.5em 0;
+}
+
+.tourism-news-article p {
+    margin: .3em 0;
+    font-size: .9em;
+}
+
+
+/*---------------------------------------ПАГИНАЦИЯ -------------------------------------------------------------------*/
+ .page{
+    display: none;
+}
+ .active-page {
+    display: block;
+}
+
+ ul.pagination {
+    float: right;
+    margin: 2em 0 1em;
+}
+
+ ul.pagination li {
+    float: left;
+    margin: 0 5px;
+
+}
+
+ ul.pagination li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+ .active-item {
+    background: #3d77d5;
+    color: #fdfdfd;
+    border-radius: 5px;
+}
+
+ ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+/*--------------------------------АДАПТИВНОСТЬ-NEWS------------------------------------------------------------------*/
+/*------------------------------------*/
+/*------------планшеты-----------------*/
+/*----------- =<48 em -----------------*/
+/*------------------------------------*/
+@media screen and (max-width: 768px) {
+    .tourism-news-article img {
+        width: 50%;
+    }
+}
+
+/*------------------------------------*/
+/*------------ смарты-------------------*/
+/*----------- <=30 em -------------------*/
+/*------------------------------------*/
+@media screen and (max-width: 480px) {
+    .tourism-news-article img {
+        width: 100%;
+    }
+   ul.pagination li a {
+        padding: 5px 10px;
+        font-size: .8em;
+
+    }
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------- SITE MAP -----------------------------------------------------------*/
+/*----------------------------------------------- SITE MAP -----------------------------------------------------------*/
+/*----------------------------------------------- SITE MAP -----------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/*Карта сайта--------------------------------------------------------*/
+.map-site h2{
+    margin:0 0 0 1em;
+    padding-top:1em;
+}
+
+.map-points{
+    list-style-type: disc;
+    margin: 1em 2em;
+}
+
+.map-points>li{
+    margin: .25em 1.5em;
+}
+
+.map-points li a{
+    color: #3070a8;
+}
+
+.map-points ul{
+    list-style-type: circle;
+    margin: .25em 2em;
+}
+.map-points ul ul{
+    list-style-type: none;
+    margin: .25em 2em;
+    font-size: .75em;
+}
+
+.map-points li a:hover{
+    border-bottom: 1px dashed #3070a8;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------КНОПКА СКРОЛЛИНГА "НАВЕРХ"-------------------------------------------*/
+/*-----------------------------------------------КНОПКА СКРОЛЛИНГА "НАВЕРХ"-------------------------------------------*/
+/*-----------------------------------------------КНОПКА СКРОЛЛИНГА "НАВЕРХ"-------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+#scrollUp{
+    width: 30px;
+    height: 30px;
+    position:fixed;
+    bottom:150px;
+    right:30px;
+    z-index: 102;
+    display:none;
+
+    text-indent:-9999px;
+    background: url('../images/sprites.png') no-repeat -4px -54px;
+    opacity:0.3;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------КНОПКИ READ MORE-----------------------------------------------------*/
+/*-----------------------------------------------КНОПКИ READ MORE-----------------------------------------------------*/
+/*-----------------------------------------------КНОПКИ READ MORE-----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/*
+* Набор правил для оформления кнопки "Читать далее",
+* без дополительных изображений;
+* исключительно средствами CSS;
+*
+* адаптация: @dobrovoi http://dbmast.ru/
+*
+
+/* Базовые стили кнопок*/
+.blue:hover{
+    border:0.0625em solid rgba(34,97,133,1);
+    background:rgba(34,97,133,0.75);
+    color:rgba(34,97,133,0.75);
+}
+
+.blue:hover:before{
+    border:0.0625em solid rgba(34,97,133,1);
+    color:rgba(34,97,133,1);
+}
+
+.blue:hover:after{
+    border:0.0625em solid rgba(34,97,133,1);
+    color:rgba(34,97,133,1);
+    background:rgba(34,97,133,1);
+}
+
+.blue:before{
+    background:rgba(34,97,133,1);
+    border:0.0625em solid rgba(34,97,133,1);
+}
+
+.blue:after{
+    background:rgba(34,97,133,1);
+    border:0.0625em solid rgba(34,97,133,1);
+}
+
+/* Переходящая цветовая заливка с угловым скруглением */
+.circle{
+    position:relative;
+    display: inline-block;
+    margin:0em .5em;
+    padding:0.25em 1.25em;
+    color:#555;
+    text-decoration:none;
+    overflow:hidden;
+    z-index:1;
+    -webkit-transition:all 0.25s ease;
+    -moz-transition:all 0.25s ease;
+    -ms-transition:all 0.25s ease;
+    -o-transition:all 0.25s ease;
+    transition:all 0.25s ease;
+}
+
+.circle:hover{
+    color:#fff;
+    border:none !important;
+}
+
+.circle:before{
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width:150%;
+    height:250%;
+    top:0em;
+    left:-150%;
+    -webkit-transition:all 0.25s ease;
+    -moz-transition:all 0.25s ease;
+    -ms-transition:all 0.25s ease;
+    -o-transition:all 0.25s ease;
+    transition:all 0.25s ease;
+    -webkit-border-top-right-radius: 100%;
+    -webkit-border-bottom-right-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    z-index:-1;
+    border:none !important;
+}
+
+.circle:hover:before{
+    left:-50%;
+}
+
+/* Стрелки в круге ротация при наведении */
+.arrow-circle{
+    position:relative;
+    display: inline-block;
+    margin:0 .5em;
+    padding:0.25em 2em 0.5em 0.5em ;
+    color:#555;
+    font-size: .75em;
+    text-decoration:none;
+    overflow:hidden;
+    z-index:1;
+    -webkit-transition:all 0.25s ease;
+    -moz-transition:all 0.25s ease;
+    -ms-transition:all 0.25s ease;
+    -o-transition:all 0.25s ease;
+    transition:all 0.25s ease;
+    border:0.0625em solid #555;
+}
+
+.arrow-circle:hover{
+    background:none;
+    color:#555;
+}
+
+.arrow-circle:after{
+    position: absolute;
+    margin-top: .3em;
+    right:0.28em;
+    content: "\f0a9";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    -webkit-transition:all 0.5s ease;
+    -moz-transition:all 0.5s ease;
+    -ms-transition:all 0.5s ease;
+    -o-transition:all 0.5s ease;
+    transition:all 0.5s ease;
+    -webkit-transform:rotateX(0deg);
+    -moz-transform:rotateX(0deg);
+    -ms-transform:rotateX(0deg);
+    -o-transform:rotateX(0deg);
+    transform:rotateX(0deg);
+    padding-left:5px;
+    background:none;
+    border-left:0.0625em solid #555;
+    border-top:none;
+    border-right:none;
+    border-bottom:none;
+}
+
+.arrow-circle:hover:after{
+    -webkit-transform:rotateX(180deg);
+    -moz-transform:rotateX(180deg);
+    -ms-transform:rotateX(180deg);
+    -o-transform:rotateX(180deg);
+    transform:rotateX(180deg);
+    background:none;
+    border-top:none;
+    border-right:none;
+    border-bottom:none;
+}
+
+
+/* анимация стрелок */
+
+@-webkit-keyframes arrow{
+    0%, 20%, 50%, 80%, 100%	{ -webkit-transform: translateX(0em); }
+    40%						{ -webkit-transform: translateX(-0.25em); }
+    60%						{ -webkit-transform: translateX(-.15em); }
+}
+@-webkit-keyframes arrow-chrome{
+    0%, 20%, 50%, 80%, 100%	{ -webkit-transform: translate(0em,-1em); }
+    40%						{ -webkit-transform: translate(-0.25em,-1em); }
+    60%						{ -webkit-transform: translate(-.15em,-1em); }
+}
+
+@-moz-keyframes arrow{
+    0%, 20%, 50%, 80%, 100%	{ -moz-transform: translateX(0); }
+    40%						{ -moz-transform: translate(-0.25em,-1em); }
+    60%						{ -moz-transform: translateX(-.15em); }
+}
+
+@-ms-keyframes arrow{
+    0%, 20%, 50%, 80%, 100%	{ -ms-transform: translateX(0); }
+    40%						{ -ms-transform: translateX(-0.25em); }
+    60%						{ -ms-transform: translateX(-.15em); }
+}
+
+@-o-keyframes arrow{
+    0%, 20%, 50%, 80%, 100%	{ -o-transform: translateX(0); }
+    40%						{ -o-transform: translateX(-0.25em); }
+    60%						{ -o-transform: translateX(-.15em); }
+}
+
+@keyframes arrow{
+    0%, 20%, 50%, 80%, 100%	{ transform: translateX(0); }
+    40%						{ transform: translateX(-0.25em); }
+    60%						{ transform: translateX(-.15em); }
+}
