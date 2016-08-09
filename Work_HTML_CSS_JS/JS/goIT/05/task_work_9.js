@@ -11,23 +11,6 @@
 // filtered = [5, 4, 3];
 // arr = [5, 7, 4, 8, 3, 0];
 
-// версия 1
-function filterRange(arr, a, b){
-    var filtered = [];
-    for (var i = 0; i < arr.length; i++) {
-        if (i >= a && i <= b) {
-            filtered.push(arr[i]);
-        }
-    }
-    return filtered;
-}
-
-var MyArr = [5, 7, 4, 8, 3, 0];
-console.log(filterRange(MyArr, 3, 5));
-console.log(MyArr);
-
-
-// версия 2
 function filterRange1(arr, a, b){
     var filtered = [];
     for (var i = 0; i < arr.length; i++) {
