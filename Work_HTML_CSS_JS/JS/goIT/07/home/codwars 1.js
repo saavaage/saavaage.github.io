@@ -8,12 +8,12 @@ function createFunctions(n) {
     var callbacks = [];
 
     for (var i=0; i<n; i++) {
-        callbacks.push(function(i) {
-            return i;
-        });
+        callbacks[i]=function(j) {
+            return function(){ return j };
+        }(i);
     }
 
     return callbacks;
 }
 
-console.log(createFunctions(5));
+console.log(createFunctions(3));
