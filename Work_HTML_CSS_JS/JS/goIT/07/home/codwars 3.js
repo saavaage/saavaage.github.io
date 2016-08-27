@@ -31,13 +31,13 @@ var make_lazy = function(){
     for(var i = 1; i< arguments.length; i++){
         arr[i-1] =  arguments[i];
     }
-    return arguments[0].apply(this, arr);
+    return arguments[0].apply(this, arr); // аналогично через прямое указание: return arguments[0].apply(arguments, arr);
 };
 
 function add(a, b, c) {
     return a + b -c;
 }
-var lazy_value = make_lazy(add, 2, 3,5);
+var lazy_value = make_lazy(add, 2, 3, 15);
 
 console.log(lazy_value);
 
