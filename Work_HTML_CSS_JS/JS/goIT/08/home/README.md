@@ -45,7 +45,7 @@ ladder.up().up().down().up().down().showStep(); // 1
 Пример использования:
 
 ```js
-var calc = new Calculator;
+var calc = new Calculator();
 
 console.log( calc.calculate('3 + 7') ); // 10
 ```
@@ -54,7 +54,7 @@ console.log( calc.calculate('3 + 7') ); // 10
 Например, добавим операции умножить `*`, поделить `/` и возвести в степень `**`:
 
 ```js
-var powerCalc = new Calculator;
+var powerCalc = new Calculator();
 powerCalc.addMethod('*', function(a, b) {
   return a * b;
 });

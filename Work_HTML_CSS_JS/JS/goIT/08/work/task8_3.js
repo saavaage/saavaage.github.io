@@ -23,3 +23,5 @@ var calculator = {
 }
 
 calculator.read();
+calculator.sum();
+calculator.mul();
