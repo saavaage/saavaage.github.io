@@ -1,12 +1,12 @@
- /**
+/**
  * Created by boss on 26 августа.
  */
 /*
  Deferring a function execution can sometimes save a lot of execution time in our programs by postponing the execution to
-  the latest possible instant of time, when we're sure that the time spent while executing it is worth it.
+ the latest possible instant of time, when we're sure that the time spent while executing it is worth it.
 
  Write a method make_lazy that takes in a function (symbol for Ruby) and the arguments to the function and returns another
-  function (lambda for Ruby) which when invoked, returns the result of the original function invoked with the supplied arguments.
+ function (lambda for Ruby) which when invoked, returns the result of the original function invoked with the supplied arguments.
 
  For example:
 
@@ -26,19 +26,24 @@
  */
 
 
-var make_lazy = function(){
+var make_lazy = function() {
+    var arr = [];
     var args = arguments;
 
-    return function(){
-        var arr = [].slice.call(args, 1);
-        return args[0].apply(this, arr);
+    for(var i = 1; i< arguments.length; i++){
+        arr[i-1] =  arguments[i];
     }
+
+    return  function(){
+       return args[0].apply(this, arr);
+    }
+
 };
 
-function add(a, b, c) {
-    return a + b - c;
+function add(a, b) {
+    return a + b;
 }
-var lazy_value = make_lazy(add, 2, 3, 15);
+var lazy_value = make_lazy(add, 2, 3);
 
 console.log(lazy_value());
 
