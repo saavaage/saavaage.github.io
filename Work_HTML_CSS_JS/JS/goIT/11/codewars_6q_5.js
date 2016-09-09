@@ -75,14 +75,14 @@ var typer = (function() {
             }
         },
         isDate: function(value){
-            if({}.toString.call(value).slice(8, -1) === 'Date'){
+            if(value instanceof Date){
                   return true;
             } else {
                 return false;
             }
         },
         isRegExp: function(value){
-            if({}.toString.call(value).slice(8, -1) === 'RegExp'){
+            if(value instanceof RegExp){
                 return true;
             } else {
                 return false;
@@ -121,7 +121,7 @@ var typer = (function() {
 
 
 console.log(typer.isString('that\'s a string'));
-console.log(typer.isNumber(NaN));
+console.log(typer.isNumber(5));
 console.log(typer.isArray([5, 2, 4, 14]));
 console.log(typer.isFunction(console.log));
 console.log(typer.isDate(new Date()));
