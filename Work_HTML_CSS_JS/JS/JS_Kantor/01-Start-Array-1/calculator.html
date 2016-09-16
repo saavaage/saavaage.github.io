@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    /*
+     Напишите код, который:
+     1/ Запрашивает по очереди значения при помощи prompt и сохраняет их в массиве.
+     2/ Заканчивает ввод, как только посетитель введёт пустую строку, не число или нажмёт «Отмена».
+     При этом ноль 0 не должен заканчивать ввод, это разрешённое число.
+     3/ Выводит сумму всех значений массива
+     */
+    var myArr = [];
+    var sum = 0;
+
+    while (true) {
+        var element = prompt('Enter number', '');
+        if (isNaN(+element) || element == null || element == '') {
+            break;
+        }
+        myArr.push(+element);
+    }
+
+    for(var i =0; i< myArr.length; i++){
+        sum +=myArr[i];
+    }
+    alert(sum);
+
+
+</script>
+</body>
+</html>

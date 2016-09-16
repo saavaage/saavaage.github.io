@@ -16,7 +16,7 @@
 // версия 2 - если кол-во букв вначале строки неизвестно
 function extractCurrencyValue1(str) {
     for (var i = 0; i < str.length; i++) {
-       if(!isNaN(+ str[i])) {
+        if (!isNaN(+str[i])) {
             break;
         }
     }
