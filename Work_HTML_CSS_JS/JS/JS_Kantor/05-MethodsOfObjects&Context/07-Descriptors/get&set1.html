@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function User(fullName) {
+        this.fullName = fullName;
+
+        Object.defineProperties(this, {
+            firstName: {
+                get: function () {
+                    return this.fullName.split(' ')[0];
+                },
+                set: function (value) {
+                    return this.fullName = value + ' ' + this.lastName;
+                }
+            },
+            lastName: {
+                get: function () {
+                    return this.fullName.split(' ')[1];
+                },
+                set: function (value) {
+                    return this.fullName = this.firstName + ' ' + value;
+                }
+            }
+
+        });
+    }
+    var vasya = new User("Василий Попкин");
+    // чтение firstName/lastName
+    alert(vasya.firstName); // Василий
+    alert(vasya.lastName); // Попкин
+
+    // запись в lastName
+    vasya.lastName = 'Сидоров';
+    vasya.firstName = 'Петя';
+    alert(vasya.fullName); // Василий Сидоров
+
+
+</script>
+</body>
+</html>

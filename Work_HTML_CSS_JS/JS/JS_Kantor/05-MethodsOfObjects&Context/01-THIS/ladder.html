@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*Есть объект «лестница» ladder:
+     var ladder = {
+     step: 0,
+     up: function() { // вверх по лестнице
+     this.step++;
+     },
+     down: function() { // вниз по лестнице
+     this.step--;
+     },
+     showStep: function() { // вывести текущую ступеньку
+     alert( this.step );
+     }
+     };
+     Сейчас, если нужно последовательно вызвать несколько методов объекта, это можно сделать так:
+     ladder.up();
+     ladder.up();
+     ladder.down();
+     ladder.showStep(); // 1
+
+     Модифицируйте код методов объекта, чтобы вызовы можно было делать цепочкой, вот так:
+     ladder.up().up().down().up().down().showStep(); // 1
+     */
+    'use strict';
+    var ladder = {
+        step: 0,
+
+        up: function() { // вверх по лестнице
+            this.step++;
+            return this;
+        },
+        down: function() { // вниз по лестнице
+            this.step--;
+            return this;
+        },
+        showStep: function() { // вывести текущую ступеньку
+            alert( this.step );
+            return this;
+        }
+    };
+//    ladder.up();
+//    ladder.up();
+//    ladder.down();
+//    ladder.showStep(); // 1
+
+    ladder.up().up().down().showStep().up().down().showStep(); // 1
+
+
+</script>
+</body>
+</html>

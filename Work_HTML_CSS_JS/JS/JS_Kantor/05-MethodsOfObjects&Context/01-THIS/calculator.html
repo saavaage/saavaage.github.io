@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    'use strict';
+    /*
+     Создайте объект calculator с тремя методами:
+     1.read() запрашивает prompt два значения и сохраняет их как свойства объекта
+     2.sum() возвращает сумму этих двух значений
+     3.mul() возвращает произведение этих двух значений
+     */
+
+    var calculator = {
+        number1: null,
+        number2: null,
+
+        read: function () {
+            this.number1 = +prompt('Enter first number', '');
+            this.number2 = +prompt('Enter second number', '');
+        },
+        sum: function () {
+            return this.number1 + this.number2;
+        },
+        mul: function () {
+            return this.number1 * this.number2;
+        }
+    };
+
+    calculator.read();
+
+    alert( calculator.sum() );
+    alert( calculator.mul() );
+
+
+</script>
+</body>
+</html>

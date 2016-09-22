@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    'use strict';
+
+    /*
+     Вам попал в руки код объекта User, который хранит имя и фамилию в свойстве this.fullName:
+     function User(fullName) {
+     this.fullName = fullName;
+     }
+     var vasya = new User("Василий Попкин");
+
+     Имя и фамилия всегда разделяются пробелом.
+     Сделайте, чтобы были доступны свойства firstName и lastName, причём не только на чтение,
+     но и на запись, вот так:
+
+     var vasya = new User("Василий Попкин");
+
+     // чтение firstName/lastName
+     alert( vasya.firstName ); // Василий
+     alert( vasya.lastName ); // Попкин
+
+     // запись в lastName
+     vasya.lastName = 'Сидоров';
+
+     alert( vasya.fullName ); // Василий Сидоров
+
+     Важно: в этой задаче fullName должно остаться свойством, а firstName/lastName – реализованы через
+     get/set.
+     Лишнее дублирование здесь ни к чему.
+     */
+    function User(fullName) {
+        this.fullName = fullName;
+    }
+    var vasya = new User("Василий Попкин");
+
+    Object.defineProperties(vasya, {
+        firstName: {
+            get: function () {
+                return this.fullName.split(' ')[0];
+            },
+            set: function (value) {
+                return this.fullName = value +' ' + this.lastName;
+            }
+        },
+        lastName: {
+            get: function () {
+                return this.fullName.split(' ')[1];
+            },
+            set: function (value) {
+                return this.fullName = this.firstName + ' ' + value;
+            }
+        }
+
+    });
+
+
+    // чтение firstName/lastName
+    alert(vasya.firstName); // Василий
+    alert(vasya.lastName); // Попкин
+
+    // запись в lastName
+    vasya.lastName = 'Сидоров';
+    vasya.firstName = 'Петя';
+    alert(vasya.fullName); // Василий Сидоров
+
+
+</script>
+</body>
+</html>

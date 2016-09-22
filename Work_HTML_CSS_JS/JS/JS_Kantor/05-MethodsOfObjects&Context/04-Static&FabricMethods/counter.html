@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+<script>'use strict'
+/*
+Добавить в конструктор Article:
+Подсчёт общего количества созданных объектов.
+Запоминание даты последнего созданного объекта.
+Используйте для этого статические свойства.
+Пусть вызов Article.showStats() выводит то и другое.
+*/
+
+//версия 1
+//function Article() {
+//    this.created = new Date();
+//    Article.count++;
+//    Article.createdLast = this.created;
+//}
+//
+//Article.count = 0;
+//
+//Article.showStats = function() {
+//        alert( 'Всего: ' + this.count  +', ' + 'Последняя: ' + this.createdLast); // (1)
+//    }
+
+// версия 2
+function Article() {
+    this.created = new Date();
+    Article.createdLast = this.created;
+
+    if (Article.count == undefined) {
+        Article.count = 0;
+    }
+    Article.count ++;
+
+    Article.showStats = function() {
+        alert( 'Всего: ' + Article.count  +', ' + 'Последняя: ' + Article.createdLast); // (1)
+    }
+
+}
+
+new Article();
+new Article();
+
+Article.showStats(); // Всего: 2, Последняя: (дата)
+
+new Article();
+
+Article.showStats(); // Всего: 3, Последняя: (дата)
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

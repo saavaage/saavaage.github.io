@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    Напишите функцию-конструктор Accumulator(startingValue). Объекты, которые она создает,
+     должны хранить текущую сумму и прибавлять к ней то, что вводит посетитель.
+    Более формально, объект должен:
+
+    1.Хранить текущее значение в своём свойстве value. Начальное значение свойства value ставится
+     конструктором равным startingValue.
+    2.Метод read() вызывает prompt, принимает число и прибавляет его к свойству value.
+    3.Таким образом, свойство value является текущей суммой всего, что ввел посетитель при вызовах метода read(),
+     с учетом начального значения startingValue.
+    */
+
+    function Accumulator(startingValue){
+        this.value = startingValue;
+        this.read = function(){
+            return this.value += +prompt('Enter a number', '');
+        }
+    }
+
+    var accumulator = new Accumulator(10); // начальное значение 1
+    accumulator.read(); // прибавит ввод prompt к текущему значению
+    accumulator.read(); // прибавит ввод prompt к текущему значению
+    alert( accumulator.value ); // выведет текущее значение
+
+
+
+</script>
+</body>
+</html>

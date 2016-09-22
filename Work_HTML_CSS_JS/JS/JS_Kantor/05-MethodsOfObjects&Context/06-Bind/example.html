@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    'use strict';
+    function bind(func, context) {
+        return function() {
+            return func.apply(context, arguments);
+        };
+    }
+    var user = {
+        firstName: "Вася",
+        sayHi: function() {
+            alert( this.firstName );
+        }
+    };
+    var user1 = {
+        firstName: "Петя"
+    };
+
+    setTimeout(user.sayHi.bind(user1), 1000);
+</script>
+</body>
+</html>

@@ -15,8 +15,6 @@ var log = [];
 
 function makeLogging(f, log) {
     return function(){
-        // var join = [].join;
-        // log.push(join.call(arguments, ','));
         log.push([].slice.call(arguments));
         return f.apply(this, arguments);
     }
