@@ -4,7 +4,7 @@
 var now =  new Date();
 console.log(now);
 
-// 24 часа после 01 - BASE.01 - BASE.1970 GMT+0
+// 24 часа после 01 - Start.01 - Start.1970 GMT+0
 var Jan02_1970 = new Date(3600 * 24 * 1000);
 console.log( Jan02_1970 );
 
@@ -90,7 +90,7 @@ console.log( d101.toTimeString() );
 
 // Разбор строки, Date.parse
 
-var msUTC = Date.parse('2012-01 - BASE-26T13:51:50.417Z'); // зона UTC
+var msUTC = Date.parse('2012-01 - Start-26T13:51:50.417Z'); // зона UTC
 
 console.log( msUTC ); // 1327571510417 (число миллисекунд)
 
