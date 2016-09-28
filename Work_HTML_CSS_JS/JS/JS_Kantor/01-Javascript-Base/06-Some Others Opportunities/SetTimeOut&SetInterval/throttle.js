@@ -16,9 +16,11 @@ function f(a) {
 function throttle(f, ms) {
     var state = false;
     var myArgs;
+    var self;
     return function () {
         if (state) {
             myArgs = arguments;
+            self = this;
         } else {
             if(!myArgs) {
                 f.apply(this, arguments);
@@ -28,7 +30,7 @@ function throttle(f, ms) {
             state = true;
             setTimeout(function () {
                 if(myArgs != myTemp){
-                    f.apply(this, myArgs);
+                    f.apply(self, myArgs);
                 }
                 state = false;
             }, ms);
@@ -42,6 +44,7 @@ var f1000 = throttle(f, 1000);
 f1000(1); // выведет 1
 f1000(2); // (тормозим, не прошло 1000 мс)
 f1000(3); // (тормозим, не прошло 1000 мс)
-setTimeout(function () { f1000(4)}, 900); // игнор (прошло только 100 мс)
+setTimeout(function () { f1000(4)}, 900); // выполн (до 1000 больше ничего не было)
 setTimeout(function () { f1000(5)}, 1100); // выполнится
-setTimeout(function () { f1000(6)}, 3150); // игнор
+setTimeout(function () { f1000(6)}, 3150); // выполн
+setTimeout(function () { f1000(7)}, 3200); //
