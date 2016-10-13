@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    /*
+     Напишите интерфейс для создания списка.
+     Для каждого пункта:
+     Запрашивайте содержимое пункта у пользователя с помощью prompt.
+     Создавайте пункт и добавляйте его к UL.
+     Процесс прерывается, когда пользователь нажимает ESC или вводит пустую строку.
+     Все элементы должны создаваться динамически.
+     Если посетитель вводит теги – пусть в списке они показываются как обычный текст.
+     */
+    var ulShape = document.createElement('ul');
+    document.body.appendChild(ulShape);
+    while (true) {
+        var str = prompt('Enter string', '');
+        if (str == "" || str == null) break;
+        var liShape = document.createElement('li');
+        liShape.textContent = str;
+//        liShape.appendChild(document.createTextNode(str)); // альтернатива
+        ulShape.appendChild(liShape);
+    }
+
+
+</script>
+</body>
+</html>

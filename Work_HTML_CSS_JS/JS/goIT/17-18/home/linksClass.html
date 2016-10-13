@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+
+    <style>
+        .external {
+            background-color: yellow
+        }
+    </style>
+</head>
+<body>
+
+<a name="list">список</a>
+<ul>
+    <li><a href="http://google.com">http://google.com</a></li>
+    <li><a href="/tutorial">/tutorial.html</a></li>
+    <li><a href="local/path">local/path</a></li>
+    <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+    <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+    <li><a href="http://internal.com/test">http://internal.com/test</a></li>
+</ul>
+
+
+<script>
+    /*
+     Сделайте желтыми внешние ссылки, добавив им класс external.
+     Все ссылки без href, без протокола и начинающиеся с http://internal.com считаются внутренними.
+     */
+
+    var linkArr = document.querySelectorAll('a[href*="://"]:not([href^="http://internal.com"]');
+    for (var i = 0; i < linkArr.length; i++) {
+            linkArr[i].classList.add('external');
+
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+<form name="search">
+    <label>Поиск по сайту:
+        <input type="text" name="search">
+    </label>
+    <input type="submit" value="Искать!">
+</form>
+
+<hr>
+
+<form name="search-person">
+    Поиск по посетителям:
+    <table id="age-table">
+        <tr>
+            <td>Возраст:</td>
+            <td id="age-list">
+                <label>
+                    <input type="radio" name="age" value="young">до 18</label>
+                <label>
+                    <input type="radio" name="age" value="mature">18-50</label>
+                <label>
+                    <input type="radio" name="age" value="senior">более 50</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Дополнительно:</td>
+            <td>
+                <input type="text" name="info[0]">
+                <input type="text" name="info[1]">
+                <input type="text" name="info[2]">
+            </td>
+        </tr>
+
+    </table>
+
+    <input type="submit" value="Искать!">
+</form>
+<script>
+
+    /*
+     Найдите (получите в переменную) в нём:
+     1.Все элементы label внутри таблицы. Должно быть 3 элемента.
+     2.Первую ячейку таблицы (со словом "Возраст").
+     3.Вторую форму в документе.
+     4.Форму с именем search, без использования её позиции в документе.
+     5.Элемент input в форме с именем search. Если их несколько, то нужен первый.
+     6.Элемент с именем info[0], без точного знания его позиции в документе.
+     7.Элемент с именем info[0], внутри формы с именем search-person.
+     */
+    var tableId = document.getElementById('age-table');
+//    //    решение 1
+//    var labelElem = tableId.getElementsByTagName('label');
+//    for (var i = 0; i < labelElem.length; i++) {
+//        alert(labelElem[i].innerHTML);
+//    }
+////    //    решение 2
+//    var firstCell = tableId.getElementsByTagName('td')[0];
+//    alert(firstCell.innerHTML);
+////
+////    // решение 3
+//    var form2 = document.getElementsByTagName('form')[1];
+//    alert(form2.innerHTML);
+
+//    // решение 4
+    var formSearch = document.querySelector('[name = search]');
+    alert(formSearch.innerHTML);
+
+    // решение 5
+    var formSearch5 = document.querySelector('[name = search]');
+    var inputTag = formSearch5.getElementsByTagName('input');
+    alert(inputTag[0].parentNode.innerHTML);
+
+    // решение 6
+    alert(document.getElementsByName('info[0]')[0]);
+
+    // решение 7
+    var formSearch7 = document.querySelector('form[name = "search-person"] input[name="info[0]"]');
+    alert (formSearch7);
+</script>
+</body>
+</html>

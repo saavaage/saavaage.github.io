@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+
+<div>Это</div>
+<div>Все</div>
+<div>Элементы DOM</div>
+
+<script>
+    /*
+     Напишите полифилл для метода remove для старых браузеров.
+     Вызов elem.remove():
+     - Если у elem нет родителя – ничего не делает.
+     - Если есть – удаляет элемент из родителя.
+     */
+    var elem = document.body.children[0];
+
+    if (!Element.prototype.remove) {
+            Element.prototype.remove = function remove() {
+                if (this.parentNode) {
+                    this.parentNode.removeChild(this);
+                }
+            };
+    }
+
+    elem.remove();
+
+</script>
+</body>
+</html>
