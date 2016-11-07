@@ -3,7 +3,7 @@
     text-decoration: none;
 }
 .header h1{
-    letter-spacing: 15px;
+    letter-spacing: 8px;
     font-size: 300%;
 }
 .header p{
@@ -131,6 +131,29 @@ footer a:hover{
     color: #fff;
 }
 
+/*подключение fancybox*/
+.thumb img {
+    filter: none; /* IE6-9 */
+    -webkit-filter: grayscale(0);
+    border-radius:5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding:5px;
+}
+.thumb img:hover {
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1);
+}
+.thumb {
+    padding:5px;
+}
+
+/*медиа-запросы*/
+@media (min-width: 992px) {
+    .lenta{
+        margin-top: 10px;
+    }
+}
 
 @media (max-width: 991px) {
     .header h1{
