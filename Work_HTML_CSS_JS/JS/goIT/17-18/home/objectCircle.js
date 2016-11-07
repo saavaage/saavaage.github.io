@@ -2,7 +2,6 @@
  * Created by boss on 12 октября.
  */
 
-'use strict';
 var data = {
     "Рыбы": {
         "Форель": {},
