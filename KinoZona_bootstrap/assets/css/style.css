@@ -12,6 +12,9 @@
     letter-spacing: 3px;
 }
 
+.lenta{
+    margin-top: 20px;
+}
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
     color: #fff;
     background-color: #346270;
@@ -39,7 +42,7 @@
 .film_block img{
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     border-radius: 5px;
     border: 5px solid #dad7d5;
 }
@@ -87,9 +90,9 @@ margin-top: 8%;
     background-color: #000000;
 }
 
-.info-block{
-    font-size: 120%;
-}
+/*.info-block{*/
+    /*font-size: 100%;*/
+/*}*/
 .info-block .badge{
     font-size: 80%;
 }
@@ -128,6 +131,18 @@ footer a:hover{
     color: #fff;
 }
 
+
+@media (max-width: 991px) {
+    .header h1{
+        letter-spacing: 2px;
+        font-size: 200%;
+    }
+    .header p{
+        font-size: 75%;
+    }
+}
+
+
 @media (max-width: 767px) {
     .nav-pills > li{
         float: none;
@@ -138,7 +153,7 @@ footer a:hover{
     }
     .header h1{
         letter-spacing: 5px;
-        font-size: 200%;
+        font-size: 235%;
     }
     .header p{
         font-size: 75%;
