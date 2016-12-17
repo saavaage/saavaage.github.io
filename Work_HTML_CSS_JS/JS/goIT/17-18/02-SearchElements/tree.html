@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+</head>
+<body>
+
+<ul>
+    <li>Животные
+        <ul>
+            <li>Млекопитающие
+                <ul>
+                    <li>Коровы</li>
+                    <li>Ослы</li>
+                    <li>Собаки</li>
+                    <li>Тигры</li>
+                </ul>
+            </li>
+            <li>Другие
+                <ul>
+                    <li>Змеи</li>
+                    <li>Птицы</li>
+                    <li>Ящерицы</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Рыбы
+        <ul>
+            <li>Аквариумные
+                <ul>
+                    <li>Гуппи</li>
+                    <li>Скалярии</li>
+                </ul>
+
+            </li>
+            <li>Морские
+                <ul>
+                    <li>Морская форель</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+    //    Напишите код, который для каждого элемента <li> выведет:
+    //    1. Текст непосредственно в нём (без подразделов).
+//    var lishki1 = document.getElementsByTagName('li');
+//    for (var i = 0; i < lishki1.length; i++) {
+//        alert(lishki1[i].firstChild.textContent);
+//    }
+
+    //2. Количество вложенных в него элементов <li> – всех, с учётом вложенных.
+    var lishki2 = document.getElementsByTagName('li');
+    for (var j = 0; j < lishki2.length; j++) {
+        var countThings = lishki2[j].querySelectorAll('li').length;
+        alert(lishki2[j].firstChild.textContent.trim() + ' : ' + countThings);
+    }
+
+
+</script>
+
+</body>
+</html>
