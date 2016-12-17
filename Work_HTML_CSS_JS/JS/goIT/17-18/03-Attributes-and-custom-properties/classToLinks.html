@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="фраза поиска, ключевые слова">
+    <meta name="description" content="описание страницы">
+    <title>Title</title>
+
+    <style>
+        .external {
+            background-color: yellow
+        }
+    </style>
+</head>
+<body>
+
+<a name="list">список</a>
+<ul>
+    <li><a href="http://google.com">http://google.com</a></li>
+    <li><a href="/tutorial">/tutorial.html</a></li>
+    <li><a href="local/path">local/path</a></li>
+    <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+    <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+    <li><a href="http://internal.com/test">http://internal.com/test</a></li>
+</ul>
+
+
+<script>
+
+//    вариант 1
+var list = document.querySelectorAll('a');
+for(var i =0; i < list.length; i++){
+    if( list[i].getAttribute('href') && list[i].getAttribute('href').indexOf('://') != -1 && list[i].getAttribute('href')!='http://internal.com/test'){
+        list[i].classList.add('external');
+    }
+}
+
+//вариант 2
+var css = 'a[href*="://"]:not([href^="http://internal.com"])';
+var links = document.querySelectorAll(css);
+
+for (var j = 0; j < links.length; j++) {
+    links[j].classList.add('external');
+}
+
+</script>
+
+</body>
+</html>
