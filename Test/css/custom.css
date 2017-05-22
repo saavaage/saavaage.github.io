@@ -60,8 +60,6 @@ body {
 
 .floating-label {
     position: absolute;
-    z-index: 0;
-    pointer-events: none;
     left: 1em;
     top: 1.5em;
     transition: 0.3s ease all;
