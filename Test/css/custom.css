@@ -1,0 +1,123 @@
+/*общие настройки*/
+@font-face {
+
+    font-family: "ProximaNova";
+    src: url('../fonts/ProximaNova-Reg.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNova-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: ProximaNova, Georgia, sans-serif;
+}
+
+/*настройка заголовков формы*/
+
+.questionary-title {
+    text-transform: uppercase;
+    background-color: #ffe699;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.questionary-subtitle {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.organization {
+    border-top: 1px solid #000;
+    color: red;
+}
+
+/*настройка placeholder - анимации*/
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+    top: .6em;
+    left: .9em;
+    font-size: 1em;
+    opacity: .85;
+}
+
+input:focus,
+input:not(:focus):valid {
+    background-color: #fff;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 1px rgba(102, 175, 233, 0.6) !important;
+}
+
+.form-group {
+    position: relative;
+}
+
+.question {
+    padding-top: 3em;
+    padding-bottom: 1.5em;
+    background-color: #eef2f7;
+    border: none;
+}
+
+.floating-label {
+    position: absolute;
+    pointer-events: none;
+    left: 1em;
+    top: 1.5em;
+    transition: 0.2s ease all;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/*настройка стилей таблицы*/
+.tableQuestion {
+    padding-left: 1em;
+    color: #000;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.questionaryTable {
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 100%;
+}
+
+.questionTable{
+    background-color: #eef2f7;
+    border: none;
+}
+
+.questionTable:focus {
+    background-color: #fff;
+}
+
+td{
+    padding: 0 !important;
+}
+
+td, textarea {
+    margin: 0 !important;
+}
+
+td, th{
+    border: 1px solid #000 !important;
+}
+
+th{
+    width: 30%;
+    vertical-align: middle !important;
+    text-align: center;
+    font-size: 1.2em;
+}
+th:nth-child(2){
+    width: 40%;
+}
