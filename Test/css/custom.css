@@ -1,4 +1,4 @@
-/*общие настройки*/
+/*общие настройки======================================================================================================*/
 @font-face {
 
     font-family: "ProximaNova";
@@ -19,7 +19,7 @@ body {
     font-family: ProximaNova, Georgia, sans-serif;
 }
 
-/*настройка заголовков формы*/
+/*настройка заголовков формы=========================================================================================*/
 
 .questionary-title {
     text-transform: uppercase;
@@ -39,7 +39,8 @@ body {
     color: red;
 }
 
-/*настройка placeholder - анимации*/
+
+/*настройка placeholder - анимации========================================*/
 input:focus ~ .floating-label,
 input:not(:focus):valid ~ .floating-label {
     top: .6em;
@@ -64,9 +65,14 @@ input:not(:focus):valid {
     background-color: #eef2f7;
     border: none;
 }
+.form-control{
+    height: auto;
+    font-size: inherit;
+}
 
 .floating-label {
     position: absolute;
+    z-index: 0;
     pointer-events: none;
     left: 1em;
     top: 1.5em;
