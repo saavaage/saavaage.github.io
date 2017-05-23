@@ -10,12 +10,6 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 <body>
@@ -29,42 +23,42 @@
         <form>
             <div class="form-group">
                 <label class="sr-only" for="questCredit">Вид кредита: кредит/кредитная линия (возобновляемая/невозобновляемая):</label>
-                <input type="text" class="form-control question" id="questCredit" required >
+                <input type="text" class="form-control question" id="questCredit" required>
                 <span class="floating-label">1. Вид кредита: кредит/кредитная линия (возобновляемая/невозобновляемая):</span>
             </div>
 
             <div class="form-group">
                 <label class="sr-only" for="aimCredit">Цель получения кредита(описываются направления использования заемных средств, при необходимости - их аргументация):</label>
-                <input type="text" class="form-control question" id="aimCredit" required >
+                <input type="text" class="form-control question" id="aimCredit" required>
                 <span class="floating-label">2. Цель получения кредита(описываются направления использования заемных средств, при необходимости - их аргументация):</span>
             </div>
 
             <div class="form-group">
                 <label class="sr-only" for="summCredit">Сумма запрашиваемого кредита (цифрами и прописью):</label>
-                <input type="text" class="form-control question" id="summCredit" required >
+                <input type="text" class="form-control question" id="summCredit" required>
                 <span class="floating-label">3. Сумма запрашиваемого кредита (цифрами и прописью):</span>
             </div>
 
             <div class="form-group">
                 <label class="sr-only" for="dateCredit">Предполагаемый срок проекта (в т.ч. указать желаемый график погашения):</label>
-                <input type="text" class="form-control question" id="dateCredit" required >
+                <input type="text" class="form-control question" id="dateCredit" required>
                 <span class="floating-label">4. Предполагаемый срок проекта (в т.ч. указать желаемый график погашения):</span>
             </div>
 
             <div class="form-group">
                 <label class="sr-only" for="rateCredit">Предполагаемая процентная ставка:</label>
-                <input type="text" class="form-control question" id="rateCredit" required >
+                <input type="text" class="form-control question" id="rateCredit" required>
                 <span class="floating-label">5. Предполагаемая процентная ставка:</span>
             </div>
 
             <div class="form-group">
                 <label class="sr-only" for="sourcesCredit">Предполагаемые источники погашения кредита:</label>
-                <input type="text" class="form-control question" id="sourcesCredit" required >
+                <input type="text" class="form-control question" id="sourcesCredit" required>
                 <span class="floating-label">6. Предполагаемые источники погашения кредита:</span>
             </div>
 
             <div class="form-group">
-                <p class="tableQuestion">7. Предлагаемое обеспечение кредита:</p>
+                <p class="textQuestion">7. Предлагаемое обеспечение кредита:</p>
                 <div class="table-responsive">
                     <table class="table questionaryTable">
                         <thead>
@@ -77,15 +71,49 @@
 
                         <tbody>
                         <tr>
-                            <td><textarea class="form-control questionTable" rows="2" ></textarea></td>
-                            <td><textarea class="form-control questionTable" rows="2" ></textarea></td>
-                            <td><textarea class="form-control questionTable" rows="2" ></textarea></td>
+                            <td><textarea class="form-control questionTable" rows="2"></textarea></td>
+                            <td><textarea class="form-control questionTable" rows="2"></textarea></td>
+                            <td><textarea class="form-control questionTable" rows="2"></textarea></td>
                         </tbody>
                     </table>
                 </div>
             </div>
 
+            <div class="form-group point7">
+                <div class="textWrap threeLine">
+                   <span class="textQuestion">Подробная характеристика имущества (местонахождение, ликвидность, ведение бизнеса на территории имущества и т.д.):</span>
+                   <div class="firstLine"></div>
+                </div>
+            </div>
 
+
+            <div class="form-group point7">
+                <div class="textWrap threeLine">
+                    <span class="textQuestion">Гарантия, поручительство (указать, кто может выступить поручителем по кредиту):</span>
+                    <div class="firstLine"></div>
+                </div>
+            </div>
+
+            <div class="form-group point8">
+                <div class="textWrap twoLine">
+                    <span class="textQuestion">8. Готовность заемщика перевести обороты на обслуживание в Банк (какой процент от общего оборота или в абсолютном выражении):</span>
+                    <div class="firstLine"></div>
+                </div>
+            </div>
+
+            <div class="form-group point8">
+                <div class="textWrap twoLine">
+                    <span class="textQuestion">9. Готовность заемщика перевести в Банк паспорта на экспортные и импортные контракты (сумма):</span>
+                    <div class="firstLine"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="textWrap twoLine">
+                    <span class="textQuestion">10. Готовность заемщика использовать иные, предоставляемые Банком услуги, в т. числе зарплатный проект (кол-во чел.):</span>
+                    <div class="firstLine"></div>
+                </div>
+            </div>
 
         </form>
     </div>

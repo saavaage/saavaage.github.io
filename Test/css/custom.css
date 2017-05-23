@@ -19,8 +19,12 @@ body {
     font-family: ProximaNova, Georgia, sans-serif;
 }
 
-/*настройка заголовков формы=========================================================================================*/
 
+.row{
+    margin-bottom: 2.5em;
+}
+
+/*настройка заголовков формы-------------------------------------------------------------------*/
 .questionary-title {
     text-transform: uppercase;
     background-color: #ffe699;
@@ -39,20 +43,19 @@ body {
     color: red;
 }
 
-
 /*настройка placeholder - анимации-*/
 
 .form-group {
     position: relative;
 }
 
-.form-control{
+.form-control {
     height: auto;
     transition: 0.3s ease all;
 }
 
 .question {
-    padding-top: 3em;
+    padding-top: 2.5em;
     padding-bottom: 1.5em;
     background-color: #eef2f7;
     border: none;
@@ -81,9 +84,8 @@ input.question:not(:focus):valid {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 1px rgba(102, 175, 233, 0.6) !important;
 }
 
-
 /*настройка стилей таблицы=======================================================================*/
-.tableQuestion {
+.textQuestion {
     padding-left: 1em;
     color: #000;
     font-size: 1.2em;
@@ -98,7 +100,7 @@ input.question:not(:focus):valid {
     width: 100%;
 }
 
-.questionTable{
+.questionTable {
     background-color: #eef2f7;
     border: none;
 }
@@ -107,7 +109,7 @@ input.question:not(:focus):valid {
     background-color: #fff;
 }
 
-td{
+td {
     padding: 0 !important;
 }
 
@@ -115,16 +117,78 @@ td, textarea {
     margin: 0 !important;
 }
 
-td, th{
+td, th {
     border: 1px solid #000 !important;
 }
 
-th{
+th {
     width: 30%;
     vertical-align: middle !important;
     text-align: center;
     font-size: 1.2em;
 }
-th:nth-child(2){
+
+th:nth-child(2) {
     width: 40%;
+}
+
+/*настройка стилей для пунктов от 7 до 10*/
+.point7{
+    margin-bottom: 4em;
+}
+.textWrap {
+    position: relative;
+}
+
+
+.textWrap > .textQuestion {
+    display: inline;
+    /*padding-left: 0;*/
+    padding-right: .4em;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.firstLine {
+    width: 100%;
+    height: 0;
+    border-bottom: 1px dashed #000;
+    position: absolute;
+    bottom: .5em;
+    z-index: -1;
+}
+
+.textWrap.threeLine:before{
+    content: "";
+    width: 100%;
+    height: 0;
+    border-bottom: 1px dashed #000;
+    position: absolute;
+    left: 0;
+    bottom: -1em;
+    }
+
+.textWrap.threeLine:after{
+    content: "";
+    width: 100%;
+    height: 0;
+    border-bottom: 1px dashed #000;
+    position: absolute;
+    left: 0;
+    bottom: -2.5em;
+}
+
+/*настройка пункта 8*/
+.textWrap.twoLine:before{
+    content: "";
+    width: 100%;
+    height: 0;
+    border-bottom: 1px dashed #000;
+    position: absolute;
+    left: 0;
+    bottom: -1em;
+}
+
+.point8{
+    margin-bottom: 2em;
 }
