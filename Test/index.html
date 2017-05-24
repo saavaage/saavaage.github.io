@@ -19,8 +19,14 @@
         <p class="text-left form-additional">Приложение 4</p>
         <h1 class="text-center questionary-title">Заявка-Анкета</h1>
         <p class="text-center questionary-subtitle">заемщика - юридического лица</p>
-        <p class="text-center organization">&#40;наименование организации&#41;</p>
         <form>
+            <div class="form-group">
+                <label class="sr-only" for="company">наименование организации</label>
+                <input type="text" class="form-control companyName" id="company" required>
+                <p class="text-center organization">&#40;наименование организации&#41;</p>
+            </div>
+
+
             <div class="form-group">
                 <label class="sr-only" for="questCredit">Вид кредита: кредит/кредитная линия (возобновляемая/невозобновляемая):</label>
                 <input type="text" class="form-control question" id="questCredit" required>
@@ -79,41 +85,38 @@
                 </div>
             </div>
 
-            <div class="form-group point7">
-                <div class="textWrap threeLine">
-                   <span class="textQuestion">Подробная характеристика имущества (местонахождение, ликвидность, ведение бизнеса на территории имущества и т.д.):</span>
-                   <div class="firstLine"></div>
-                </div>
-            </div>
 
-
-            <div class="form-group point7">
-                <div class="textWrap threeLine">
-                    <span class="textQuestion">Гарантия, поручительство (указать, кто может выступить поручителем по кредиту):</span>
-                    <div class="firstLine"></div>
-                </div>
-            </div>
-
-            <div class="form-group point8">
-                <div class="textWrap twoLine">
-                    <span class="textQuestion">8. Готовность заемщика перевести обороты на обслуживание в Банк (какой процент от общего оборота или в абсолютном выражении):</span>
-                    <div class="firstLine"></div>
-                </div>
-            </div>
-
-            <div class="form-group point8">
-                <div class="textWrap twoLine">
-                    <span class="textQuestion">9. Готовность заемщика перевести в Банк паспорта на экспортные и импортные контракты (сумма):</span>
-                    <div class="firstLine"></div>
-                </div>
+            <div class="form-group">
+                <label class="sr-only" for="propertyCredit">Подробная характеристика имущества (местонахождение, ликвидность, ведение бизнеса на территории имущества и т.д.):</label>
+                <textarea class="form-control question" rows="2"  id="propertyCredit" required></textarea>
+                <span class="floating-label">Подробная характеристика имущества (местонахождение, ликвидность, ведение бизнеса на территории имущества и т.д.):</span>
             </div>
 
             <div class="form-group">
-                <div class="textWrap twoLine">
-                    <span class="textQuestion">10. Готовность заемщика использовать иные, предоставляемые Банком услуги, в т. числе зарплатный проект (кол-во чел.):</span>
-                    <div class="firstLine"></div>
-                </div>
+                <label class="sr-only" for="garantyCredit">Гарантия, поручительство (указать, кто может выступить поручителем по кредиту):</label>
+                <textarea class="form-control question" rows="2"  id="garantyCredit" required></textarea>
+                <span class="floating-label">Гарантия, поручительство (указать, кто может выступить поручителем по кредиту):</span>
             </div>
+
+            <div class="form-group">
+                <label class="sr-only" for="ability1Credit">8. Готовность заемщика перевести обороты на обслуживание в Банк (какой процент от общего оборота или в абсолютном выражении):</label>
+                <textarea class="form-control question" rows="1"  id="ability1Credit" required></textarea>
+                <span class="floating-label">8. Готовность заемщика перевести обороты на обслуживание в Банк (какой процент от общего оборота или в абсолютном выражении):</span>
+            </div>
+
+            <div class="form-group">
+                <label class="sr-only" for="ability2Credit">9. Готовность заемщика перевести в Банк паспорта на экспортные и импортные контракты (сумма):</label>
+                <textarea class="form-control question" rows="1"  id="ability2Credit" required></textarea>
+                <span class="floating-label">9. Готовность заемщика перевести в Банк паспорта на экспортные и импортные контракты (сумма):</span>
+            </div>
+
+            <div class="form-group">
+                <label class="sr-only" for="ability3Credit">10. Готовность заемщика использовать иные, предоставляемые Банком услуги, в т. числе зарплатный проект (кол-во чел.):</label>
+                <textarea class="form-control question" rows="1"  id="ability3Credit" required></textarea>
+                <span class="floating-label">10. Готовность заемщика использовать иные, предоставляемые Банком услуги, в т. числе зарплатный проект (кол-во чел.):</span>
+            </div>
+
+
 
         </form>
     </div>
