@@ -54,7 +54,7 @@ body {
     color: red;
 }
 
-/*настройка placeholder - анимации-*/
+/*настройка placeholder - анимации---------------------------------------------------------------------*/
 
 .form-group {
     position: relative;
@@ -67,7 +67,7 @@ body {
 
 .question {
     padding-top: 2.5em;
-    padding-bottom: 2.5em;
+    padding-bottom: 1.3em;
     background-color: #eef2f7;
     border: none;
 }
@@ -144,6 +144,10 @@ th:nth-child(2) {
 }
 
 @media (max-width: 768px){
+
+    .question{
+        padding-bottom: 2.5em;
+    }
 
     .floating-label {
         top: 1.5em;
