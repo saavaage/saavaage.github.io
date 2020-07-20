@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="calc.css" />
+  </head>
+  <body>
+    <div class="product-cart-wrapper cart-block">
+      <h3>Количество</h3>
+      <p>Введите в удобных для Вас единицах</p>
+      <form class="input-fields">
+        <div class="form-item form-item-shtuk">
+          <input type="radio" name="product-units" id="radio-shtuk" checked />
+          <label for="radio-shtuk"
+            ><input
+              type="number"
+              id="edit-shtuk"
+              name="shtuk"
+              value="1"
+              min="0"
+              max="999"
+              class="form-text"
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+            /><span class="units"> шт.</span></label
+          >
+        </div>
+
+        <div class="form-item form-item-ploschad">
+          <input type="radio" name="product-units" id="radio-ploschad" />
+          <label for="radio-ploschad"
+            ><input
+              type="number"
+              id="edit-ploschad"
+              name="ploschad"
+              step="1"
+              value="1"
+              min="0"
+              max="999"
+              class="form-text"
+            /><span class="units1"> м<sup>2</sup></span></label
+          >
+        </div>
+      </form>
+      <div class="summary-wrapper">
+        <div class="summary-cost">Итоговая стоимость:</div>
+        <div id="price_total"></div>
+      </div>
+      <span>Площадь:</span>
+      <div
+        class="field field-name-field-square field-type-number-float field-label-hidden"
+      >
+        <div class="field-items">
+          <div class="field-item even">0.18</div>
+        </div>
+      </div>
+
+      <span>Цена:</span>
+      <div
+        class="field field-name-commerce-price field-type-commerce-price field-label-hidden"
+      >
+        <div class="field-items">
+          <div class="field-item even">4,44&nbsp;р</div>
+        </div>
+      </div>
+
+      <span>Кол-во:</span><input id="edit-quantity" value="" type="text" />
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>
